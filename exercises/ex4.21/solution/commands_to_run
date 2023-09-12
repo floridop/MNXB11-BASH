@@ -1,0 +1,6 @@
+cp ~/.bashrc ~/20230912bashrc
+code ~/.bashrc &
+source ~/.bashrc
+alias
+mnxb11env
+ls

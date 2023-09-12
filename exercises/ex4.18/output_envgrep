@@ -1,1 +1,4 @@
-BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`
+BASH_FUNC_ml%%=() {  eval "$($LMOD_DIR/ml_cmd "$@")"
+BASH_FUNC_which%%=() {  ( alias;
+BASH_FUNC_module%%=() {  if [ -z "${LMOD_SH_DBG_ON+x}" ]; then
+BASH_FUNC_scl%%=() {  if [ "$1" = "load" -o "$1" = "unload" ]; then

@@ -4,11 +4,16 @@
 USERINFO=$(id pflorido)
 
 # extract the main group by using pipe and the cut command
-MAINGROUP=$(id pflorido | cut -d' ' -f 1)
+MAINGROUP=$(id pflorido | cut -d' ' -f 2)
 
 echo "USERINFO is: $USERINFO" 
 echo "MAINGROUP is: $MAINGROUP"
 
 # same as above but using the pipe on the variable content
 echo "MAINGROUP reusing the \$USERINFO variable content:"
+echo "$USERINFO" | cut -d' ' -f 2
+
+# same as above but using the pipe on the variable content
+echo "USERID reusing the \$USERINFO variable content:"
 echo "$USERINFO" | cut -d' ' -f 1
+

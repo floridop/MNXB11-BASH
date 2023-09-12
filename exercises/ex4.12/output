@@ -1,20 +1,24 @@
-[pflorido@pptest-iridium solution]$ ls /
-bin  boot  cgroup  cvmfs  dev  etc  home  lib  lib64  lost+found  media  misc  mnt  net  nfs  nfs4export  nodestmp  opt  proc  root  sbin  selinux  srv  sys  tmp  usr  var
-[pflorido@pptest-iridium solution]$ echo $?
+[pflorido@cosmos3 ex4.12]$ ls /
+afs   cvmfs  gpfs  lib64       lunarc  mnt  proc      run    srv         sys  var
+bin   dev    home  local       media   net  projects  sbin   sw          tmp
+boot  etc    lib   lost+found  misc    opt  root      share  sw_aurora2  usr
+[pflorido@cosmos3 ex4.12]$ echo $?
 0
-[pflorido@pptest-iridium solution]$ ls /etc/MNXB01
-ls: cannot access /etc/MNXB01: No such file or directory
-[pflorido@pptest-iridium solution]$ echo $?
+[pflorido@cosmos3 ex4.12]$ ls /etc/MNXB01
+ls: cannot access '/etc/MNXB01': No such file or directory
+[pflorido@cosmos3 ex4.12]$ echo $?
 2
-[pflorido@pptest-iridium solution]$ ls / ; ls /etc/MNXB01
-bin  boot  cgroup  cvmfs  dev  etc  home  lib  lib64  lost+found  media  misc  mnt  net  nfs  nfs4export  nodestmp  opt  proc  root  sbin  selinux  srv  sys  tmp  usr  var
-ls: cannot access /etc/MNXB01: No such file or directory
-[pflorido@pptest-iridium solution]$ echo $?
+[pflorido@cosmos3 ex4.12]$ ls /; ls /etc/MNXB01
+afs   cvmfs  gpfs  lib64       lunarc  mnt  proc      run    srv         sys  var
+bin   dev    home  local       media   net  projects  sbin   sw          tmp
+boot  etc    lib   lost+found  misc    opt  root      share  sw_aurora2  usr
+ls: cannot access '/etc/MNXB01': No such file or directory
+[pflorido@cosmos3 ex4.12]$ echo $?
 2
-[pflorido@pptest-iridium solution]$ ls /etc/MNXB01 ; ls /
-ls: cannot access /etc/MNXB01: No such file or directory
-bin  boot  cgroup  cvmfs  dev  etc  home  lib  lib64  lost+found  media  misc  mnt  net  nfs  nfs4export  nodestmp  opt  proc  root  sbin  selinux  srv  sys  tmp  usr  var
-[pflorido@pptest-iridium solution]$ echo $?
+[pflorido@cosmos3 ex4.12]$ ls /etc/MNXB01; ls /
+ls: cannot access '/etc/MNXB01': No such file or directory
+afs   cvmfs  gpfs  lib64       lunarc  mnt  proc      run    srv         sys  var
+bin   dev    home  local       media   net  projects  sbin   sw          tmp
+boot  etc    lib   lost+found  misc    opt  root      share  sw_aurora2  usr
+[pflorido@cosmos3 ex4.12]$ echo $?
 0
-[pflorido@pptest-iridium solution]$ 
-

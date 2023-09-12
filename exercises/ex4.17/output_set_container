@@ -1,0 +1,437 @@
+APPTAINER_APPNAME=
+APPTAINER_BIND=/var/opt/thinlinc/sessions/pflorido/37/Xauthority,/run/user,/projects
+APPTAINER_COMMAND=run
+APPTAINER_CONTAINER=/projects/hep/fs10/mnxb11/containers/mnxb11_al9.latest.sif
+APPTAINER_ENVIRONMENT=/.singularity.d/env/91-environment.sh
+APPTAINER_NAME=mnxb11_al9.latest.sif
+BASH=/bin/bash
+BASHOPTS=checkwinsize:cmdhist:complete_fullquote:expand_aliases:extquote:force_fignore:globasciiranges:histappend:hostcomplete:interactive_comments:progcomp:promptvars:sourcepath
+BASHRCSOURCED=Y
+BASH_ALIASES=()
+BASH_ARGC=([0]="0")
+BASH_ARGV=()
+BASH_CMDS=()
+BASH_ENV=/usr/share/lmod/lmod/init/bash
+BASH_LINENO=()
+BASH_REMATCH=([0]=":/usr/share/man:")
+BASH_SOURCE=()
+BASH_VERSINFO=([0]="5" [1]="1" [2]="8" [3]="1" [4]="release" [5]="x86_64-redhat-linux-gnu")
+BASH_VERSION='5.1.8(1)-release'
+CMAKE_PREFIX_PATH=/opt/apps/root/cmake:
+COBBLER_SERVER=10.50.0.1
+COLORTERM=truecolor
+COLUMNS=101
+CPLUS_INCLUDE_PATH=/opt/apps/root/include:
+C_INCLUDE_PATH=/opt/apps/root/include:
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/6312/bus
+DEBUGINFOD_URLS='https://debuginfod.centos.org/ '
+DESKTOP_SESSION=gnome
+DIRSTACK=()
+DISPLAY=:37
+EUID=6312
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/77ad3b3c_2eb9_4869_a979_476d5c6fe2e3
+GNOME_TERMINAL_SERVICE=:1.92
+GROUPS=()
+HISTCONTROL=ignoredups
+HISTFILE=/home/pflorido/.bash_history
+HISTFILESIZE=1000
+HISTSIZE=1000
+HOME=/home/pflorido
+HOSTNAME=cosmos3
+HOSTTYPE=x86_64
+IFS=$' \t\n'
+KRB5CCNAME=/var/opt/thinlinc/sessions/pflorido/37/krb5cc
+LANG=C.utf8
+LC_ADDRESS=C.UTF-8
+LC_COLLATE=C.UTF-8
+LC_CTYPE=C.UTF-8
+LC_IDENTIFICATION=C.UTF-8
+LC_MEASUREMENT=C.UTF-8
+LC_MESSAGES=C.UTF-8
+LC_MONETARY=C.UTF-8
+LC_NAME=C.UTF-8
+LC_NUMERIC=C.UTF-8
+LC_PAPER=C.UTF-8
+LC_TELEPHONE=C.UTF-8
+LC_TIME=C.UTF-8
+LD_LIBRARY_PATH=/opt/apps/root/lib:/.singularity.d/libs
+LESSOPEN='||/usr/bin/lesspipe.sh %s'
+LINES=51
+LMOD_CMD=/usr/share/lmod/lmod/libexec/lmod
+LMOD_DIR=/usr/share/lmod/lmod/libexec
+LMOD_PKG=/usr/share/lmod/lmod
+LMOD_RC=/sw/lmod/lmodrc.lua
+LMOD_ROOT=/usr/share/lmod
+LMOD_SETTARG_FULL_SUPPORT=no
+LMOD_SYSTEM_DEFAULT_MODULES=SoftwareTree/Milan
+LMOD_VERSION=8.7.20
+LMOD_sys=Linux
+LOADEDMODULES=SoftwareTree/Milan
+LOGNAME=pflorido
+LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:'
+MACHTYPE=x86_64-redhat-linux-gnu
+MAIL=/var/spool/mail/pflorido
+MAILCHECK=60
+MANPATH=/usr/share/lmod/lmod/share/man::/opt/thinlinc/share/man
+MNXB11_APPS=/opt/apps
+MNXB11_BUILDDIR=/opt/build
+MNXB11_DOWNLOADS=/opt/download
+MNXB11_MNXB11DIR=/opt
+MNXB11_SCRIPTS=/opt/scripts
+MNXB11_SOURCEDIR=/opt/source
+MODULEPATH=/etc/scl/modulefiles:/etc/scl/modulefiles:/sw/Modules/modulefiles/Core:/sw/easybuild_milan/modules/all/Core:/etc/modulefiles:/usr/share/modulefiles:/usr/share/modulefiles/Linux:/usr/share/modulefiles/Core:/usr/share/lmod/lmod/modulefiles/Core
+MODULEPATH_ROOT=/sw/Modules/modulefiles:/usr/share/modulefiles
+MODULESHOME=/usr/share/Modules
+MODULES_CMD=/usr/share/Modules/libexec/modulecmd.tcl
+MODULES_RUN_QUARANTINE='LD_LIBRARY_PATH LD_PRELOAD'
+OLDPWD=/home/pflorido/git/MNXB11-BASH/exercises
+ONDEMAND_DT_DIR=/sw/pkg/gfxlauncher
+OPTERR=1
+OPTIND=1
+OSTYPE=linux-gnu
+PATH=/usr/share/Modules/bin:/opt/apps/root/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+PCSCTUN_COOKIE=/var/opt/thinlinc/sessions/pflorido/37/pcsctun-cookie
+PCSCTUN_SERVER=127.0.0.1:5276
+PIPESTATUS=([0]="0")
+PPID=3558991
+PS1='Apptainer> '
+PS2='> '
+PS4='+ '
+PULSE_COOKIE=/var/opt/thinlinc/sessions/pflorido/37/pulse-cookie
+PULSE_SERVER=127.0.0.1:5275
+PWD=/home/pflorido/git/MNXB11-BASH/exercises/ex4.17
+QT_IM_MODULE=ibus
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/3485440,unix/unix:/tmp/.ICE-unix/3485440
+SHELL=/bin/bash
+SHELLOPTS=braceexpand:emacs:hashall:histexpand:history:interactive-comments:monitor
+SHLVL=3
+SINGULARITY_BIND=/var/opt/thinlinc/sessions/pflorido/37/Xauthority,/run/user,/projects
+SINGULARITY_CONTAINER=/projects/hep/fs10/mnxb11/containers/mnxb11_al9.latest.sif
+SINGULARITY_ENVIRONMENT=/.singularity.d/env/91-environment.sh
+SINGULARITY_NAME=mnxb11_al9.latest.sif
+SNIC_TMP=snic_tmp
+SSH_AUTH_SOCK=/run/user/6312/keyring/ssh
+SYSTEMD_EXEC_PID=3485467
+S_COLORS=auto
+TERM=xterm-256color
+TLPREFIX=/opt/thinlinc
+TLPROFILE=gnome
+TLSESSIONDATA=/var/opt/thinlinc/sessions/pflorido/37
+TOWN=Springfield
+UID=6312
+USER=pflorido
+USERNAME=pflorido
+USER_PATH=/sw/pkg/gfxlauncher:/home/pflorido/bin:/sw/pkg/gfxlauncher:/bin:/usr/bin:/opt/thinlinc/bin:/usr/local/bin:/usr/bin/X11:/sbin:/usr/sbin:/usr/local/sbin:.:/sw/pkg/lunarc/bin:/sw/pkg/slurm/local/bin:.:/sw/pkg/lunarc/bin:/sw/pkg/slurm/local/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin
+VTE_VERSION=6402
+XAUTHORITY=/var/opt/thinlinc/sessions/pflorido/37/Xauthority
+XDG_CURRENT_DESKTOP=GNOME
+XDG_DATA_DIRS=/home/pflorido/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+XDG_MENU_PREFIX=gnome-
+XDG_RUNTIME_DIR=/run/user/6312
+XDG_SESSION_CLASS=user
+XDG_SESSION_DESKTOP=gnome
+XDG_SESSION_TYPE=x11
+XMODIFIERS=@im=ibus
+_=env
+_LMFILES_=/usr/share/lmod/lmod/modulefiles/Core/SoftwareTree/Milan.lua
+_ModuleTable001_=X01vZHVsZVRhYmxlXyA9IHsKTVR2ZXJzaW9uID0gMywKY19yZWJ1aWxkVGltZSA9IGZhbHNlLApjX3Nob3J0VGltZSA9IGZhbHNlLApkZXB0aFQgPSB7fSwKZmFtaWx5ID0ge30sCm1UID0gewpTb2Z0d2FyZVRyZWUgPSB7CmZuID0gIi91c3Ivc2hhcmUvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmUvU29mdHdhcmVUcmVlL01pbGFuLmx1YSIsCmZ1bGxOYW1lID0gIlNvZnR3YXJlVHJlZS9NaWxhbiIsCmxvYWRPcmRlciA9IDEsCnByb3BUID0gewpsbW9kID0gewpzdGlja3kgPSAxLAp9LAp9LApzdGFja0RlcHRoID0gMCwKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gIlNvZnR3YXJlVHJlZS9NaWxhbiIsCndWID0gIiptaWxhbi4qemZpbmFsIiwKfSwKfSwKbXBhdGhB
+_ModuleTable002_=ID0gewoiL2V0Yy9zY2wvbW9kdWxlZmlsZXMiLCAiL3N3L01vZHVsZXMvbW9kdWxlZmlsZXMvQ29yZSIKLCAiL3N3L2Vhc3lidWlsZF9taWxhbi9tb2R1bGVzL2FsbC9Db3JlIiwgIi9ldGMvc2NsL21vZHVsZWZpbGVzIgosICIvZXRjL21vZHVsZWZpbGVzIiwgIi91c3Ivc2hhcmUvbW9kdWxlZmlsZXMiLCAiL3Vzci9zaGFyZS9tb2R1bGVmaWxlcy9MaW51eCIKLCAiL3Vzci9zaGFyZS9tb2R1bGVmaWxlcy9Db3JlIiwgIi91c3Ivc2hhcmUvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmUiLAp9LApzeXN0ZW1CYXNlTVBBVEggPSAiL2V0Yy9zY2wvbW9kdWxlZmlsZXM6L2V0Yy9tb2R1bGVmaWxlczovdXNyL3NoYXJlL21vZHVsZWZpbGVzOi91c3Ivc2hhcmUvbW9kdWxlZmlsZXMv
+_ModuleTable003_=TGludXg6L3Vzci9zaGFyZS9tb2R1bGVmaWxlcy9Db3JlOi91c3Ivc2hhcmUvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmUiLAp9Cg==
+_ModuleTable_Sz_=3
+__Init_Default_Modules=1
+__LMOD_REF_COUNT_MODULEPATH='/etc/scl/modulefiles:2;/sw/Modules/modulefiles/Core:1;/sw/easybuild_milan/modules/all/Core:1;/etc/modulefiles:1;/usr/share/modulefiles:1;/usr/share/modulefiles/Linux:1;/usr/share/modulefiles/Core:1;/usr/share/lmod/lmod/modulefiles/Core:1'
+__LMOD_REF_COUNT_MODULEPATH_ROOT='/sw/Modules/modulefiles:1;/usr/share/modulefiles:1'
+new_dirs=
+shell=bash
+which_declare='declare -f'
+which_opt=-f
+_ml () 
+{ 
+    local cur="$2" prev="$3" cmds opts;
+    COMPREPLY=();
+    case "$prev" in 
+        add | load | try-add | try-load)
+            _module_comgen_words_and_files "--auto --no-auto --force -f --icase -i $(_module_not_yet_loaded $cur)" "$cur"
+        ;;
+        avail)
+            _module_comgen_words_and_files "-a -C -d -i -j -L -l -o -S -t --all --contains --default --icase --json --latest --long --output --output= --starts-with --terse --indepth --no-indepth $(_module_avail $cur)" "$cur"
+        ;;
+        edit)
+            _module_comgen_words_and_files "$(_module_avail $cur)" "$cur"
+        ;;
+        aliases)
+            COMPREPLY=($(compgen -W "-a --all" -- "$cur"))
+        ;;
+        list | savelist)
+            COMPREPLY=($(compgen -W "-a -j -l -o -t --all --json --long --output --output= --terse" -- "$cur"))
+        ;;
+        clear)
+            COMPREPLY=($(compgen -W "--force -f" -- "$cur"))
+        ;;
+        restore | save | saveshow | saverm | is-saved)
+            COMPREPLY=($(compgen -W "$(_module_savelist)" -- "$cur"))
+        ;;
+        rm | del | remove | unload | switch | swap)
+            COMPREPLY=($(compgen -W "--auto --no-auto --force -f --icase -i ${LOADEDMODULES//:/ }" -- "$cur"))
+        ;;
+        unuse | is-used)
+            COMPREPLY=($(IFS=: compgen -W "${MODULEPATH}" -- "$cur"))
+        ;;
+        use | -a | --append)
+
+        ;;
+        display | help | show | test | path | paths | is-loaded | info-loaded)
+            _module_comgen_words_and_files "-i --icase $(_module_avail $cur)" "$cur"
+        ;;
+        is-avail)
+            _module_comgen_words_and_files "-a -i --all --icase $(_module_avail $cur)" "$cur"
+        ;;
+        whatis)
+            _module_comgen_words_and_files "-a -i -j --all --icase --json $(_module_avail $cur)" "$cur"
+        ;;
+        apropos | keyword | search)
+            COMPREPLY=($(compgen -W "-a -j --all --json" -- "$cur"))
+        ;;
+        config | --reset)
+            COMPREPLY=($(compgen -W "--dump-state --reset advanced_version_spec auto_handling avail_indepth avail_output avail_terse_output collection_pin_version collection_target color colors contact editor extended_default extra_siteconfig home icase implicit_default implicit_requirement list_output list_terse_output locked_configs mcookie_version_check ml nearly_forbidden_days pager quarantine_support rcfile run_quarantine search_match set_shell_startup shells_with_ksh_fpath silent_shell_debug tag_abbrev tag_color_name term_background term_width unload_match_order variant_shortcut verbosity wa_277" -- "$cur"))
+        ;;
+        -h | --help | -V | --version | purge | refresh | reload | sh-to-mod | source)
+
+        ;;
+        append-path | prepend-path)
+            COMPREPLY=($(compgen -W "-d --delim --duplicates" -- "$cur"))
+        ;;
+        remove-path)
+            COMPREPLY=($(compgen -W "-d --delim --index" -- "$cur"))
+        ;;
+        initadd | initclear | initlist | initprepend | initrm)
+
+        ;;
+        *)
+            if test $COMP_CWORD -gt 2; then
+                _module_long_arg_list "$cur";
+            else
+                case "$cur" in 
+                    ls)
+                        COMPREPLY="list"
+                    ;;
+                    sw*)
+                        COMPREPLY="switch"
+                    ;;
+                    -*)
+                        COMPREPLY=($(compgen -W "-D -h -s -T -v -V -w --debug --help --silent --trace --verbose --version --paginate --no-pager --color --color= --width --width=" -- "$cur"));
+                        loaded_modules="";
+                        for i in ${LOADEDMODULES//:/ };
+                        do
+                            loaded_modules+="-${i} ";
+                        done;
+                        COMPREPLY=("${COMPREPLY[@]}" $(compgen -W "--auto --no-auto --force -f --icase -i $loaded_modules" -- "$cur"))
+                    ;;
+                    *)
+                        _module_comgen_words_and_files "--auto --no-auto --force -f --icase -i $(_module_not_yet_loaded $cur)" "$cur";
+                        COMPREPLY=("${COMPREPLY[@]}" $(compgen -W "-D -h -s -T -v -V -w --debug --help --silent --trace --verbose --version --paginate --no-pager --color --color= --width --width= add apropos aliases avail append-path clear config del display edit help initadd initclear initlist initprepend initrm is-loaded is-saved is-used is-avail info-loaded keyword list load path paths purge prepend-path refresh reload restore rm remove remove-path save savelist saveshow saverm search show sh-to-mod source swap switch test try-add try-load unload unuse use whatis" -- "$cur"));
+                        loaded_modules="";
+                        for i in ${LOADEDMODULES//:/ };
+                        do
+                            loaded_modules+="-${i} ";
+                        done;
+                        COMPREPLY=("${COMPREPLY[@]}" $(compgen -W "--auto --no-auto --force -f --icase -i $loaded_modules" -- "$cur"))
+                    ;;
+                esac;
+            fi
+        ;;
+    esac
+}
+_module () 
+{ 
+    local cur="$2" prev="$3" cmds opts;
+    COMPREPLY=();
+    case "$prev" in 
+        add | load | try-add | try-load)
+            _module_comgen_words_and_files "--auto --no-auto --force -f --icase -i $(_module_not_yet_loaded $cur)" "$cur"
+        ;;
+        avail)
+            _module_comgen_words_and_files "-a -C -d -i -j -L -l -o -S -t --all --contains --default --icase --json --latest --long --output --output= --starts-with --terse --indepth --no-indepth $(_module_avail $cur)" "$cur"
+        ;;
+        edit)
+            _module_comgen_words_and_files "$(_module_avail $cur)" "$cur"
+        ;;
+        aliases)
+            COMPREPLY=($(compgen -W "-a --all" -- "$cur"))
+        ;;
+        list | savelist)
+            COMPREPLY=($(compgen -W "-a -j -l -o -t --all --json --long --output --output= --terse" -- "$cur"))
+        ;;
+        clear)
+            COMPREPLY=($(compgen -W "--force -f" -- "$cur"))
+        ;;
+        restore | save | saveshow | saverm | is-saved)
+            COMPREPLY=($(compgen -W "$(_module_savelist)" -- "$cur"))
+        ;;
+        rm | del | remove | unload | switch | swap)
+            COMPREPLY=($(compgen -W "--auto --no-auto --force -f --icase -i ${LOADEDMODULES//:/ }" -- "$cur"))
+        ;;
+        unuse | is-used)
+            COMPREPLY=($(IFS=: compgen -W "${MODULEPATH}" -- "$cur"))
+        ;;
+        use | -a | --append)
+
+        ;;
+        display | help | show | test | path | paths | is-loaded | info-loaded)
+            _module_comgen_words_and_files "-i --icase $(_module_avail $cur)" "$cur"
+        ;;
+        is-avail)
+            _module_comgen_words_and_files "-a -i --all --icase $(_module_avail $cur)" "$cur"
+        ;;
+        whatis)
+            _module_comgen_words_and_files "-a -i -j --all --icase --json $(_module_avail $cur)" "$cur"
+        ;;
+        apropos | keyword | search)
+            COMPREPLY=($(compgen -W "-a -j --all --json" -- "$cur"))
+        ;;
+        config | --reset)
+            COMPREPLY=($(compgen -W "--dump-state --reset advanced_version_spec auto_handling avail_indepth avail_output avail_terse_output collection_pin_version collection_target color colors contact editor extended_default extra_siteconfig home icase implicit_default implicit_requirement list_output list_terse_output locked_configs mcookie_version_check ml nearly_forbidden_days pager quarantine_support rcfile run_quarantine search_match set_shell_startup shells_with_ksh_fpath silent_shell_debug tag_abbrev tag_color_name term_background term_width unload_match_order variant_shortcut verbosity wa_277" -- "$cur"))
+        ;;
+        -h | --help | -V | --version | purge | refresh | reload | sh-to-mod | source)
+
+        ;;
+        append-path | prepend-path)
+            COMPREPLY=($(compgen -W "-d --delim --duplicates" -- "$cur"))
+        ;;
+        remove-path)
+            COMPREPLY=($(compgen -W "-d --delim --index" -- "$cur"))
+        ;;
+        initadd | initclear | initlist | initprepend | initrm)
+
+        ;;
+        *)
+            if test $COMP_CWORD -gt 2; then
+                _module_long_arg_list "$cur";
+            else
+                case "$cur" in 
+                    ls)
+                        COMPREPLY="list"
+                    ;;
+                    sw*)
+                        COMPREPLY="switch"
+                    ;;
+                    -*)
+                        COMPREPLY=($(compgen -W "-D -h -s -T -v -V -w --debug --help --silent --trace --verbose --version --paginate --no-pager --color --color= --width --width=" -- "$cur"))
+                    ;;
+                    *)
+                        COMPREPLY=($(compgen -W "-D -h -s -T -v -V -w --debug --help --silent --trace --verbose --version --paginate --no-pager --color --color= --width --width= add apropos aliases avail append-path clear config del display edit help initadd initclear initlist initprepend initrm is-loaded is-saved is-used is-avail info-loaded keyword list load path paths purge prepend-path refresh reload restore rm remove remove-path save savelist saveshow saverm search show sh-to-mod source swap switch test try-add try-load unload unuse use whatis" -- "$cur"))
+                    ;;
+                esac;
+            fi
+        ;;
+    esac
+}
+_module_avail () 
+{ 
+    local cur="${1:-}";
+    if [ -z "$cur" -o "${cur:0:1}" != '-' ]; then
+        module avail --color=never -s -t -S --no-indepth -o '' $cur 2>&1;
+    fi
+}
+_module_comgen_words_and_files () 
+{ 
+    local k=0;
+    local setnospace=1;
+    for val in $(compgen -W "$1" -- "$2");
+    do
+        if [ !$setnospace -a "${val: -1:1}" = '/' ]; then
+            type compopt &> /dev/null && compopt -o nospace;
+            setnospace=0;
+        fi;
+        COMPREPLY[k++]="$val";
+    done
+}
+_module_long_arg_list () 
+{ 
+    local cur="$1" i;
+    if [[ ${COMP_WORDS[COMP_CWORD-2]} == sw* ]]; then
+        _module_comgen_words_and_files "$(_module_not_yet_loaded $cur)" "$cur";
+        return;
+    fi;
+    for ((i = COMP_CWORD - 1; i > 0; i--))
+    do
+        case ${COMP_WORDS[$i]} in 
+            add | load)
+                _module_comgen_words_and_files "$(_module_not_yet_loaded $cur)" "$cur";
+                break
+            ;;
+            rm | del | remove | unload | switch | swap)
+                COMPREPLY=($(IFS=: compgen -W "${LOADEDMODULES}" -- "$cur"));
+                break
+            ;;
+        esac;
+    done
+}
+_module_not_yet_loaded () 
+{ 
+    _module_avail ${1:-} | sort | sed -E "\%^(${LOADEDMODULES//:/|})$%d"
+}
+_module_raw () 
+{ 
+    eval `/usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash "$@"`;
+    _mlstatus=$?;
+    return $_mlstatus
+}
+_module_savelist () 
+{ 
+    module savelist --color=never -s -t 2>&1 | sed '
+        /No named collection\.$/d;
+        /Named collection list$/d;
+        /:$/d;'
+}
+gawklibpath_append () 
+{ 
+    [ -z "$AWKLIBPATH" ] && AWKLIBPATH=`gawk 'BEGIN {print ENVIRON["AWKLIBPATH"]}'`;
+    export AWKLIBPATH="$AWKLIBPATH:$*"
+}
+gawklibpath_default () 
+{ 
+    unset AWKLIBPATH;
+    export AWKLIBPATH=`gawk 'BEGIN {print ENVIRON["AWKLIBPATH"]}'`
+}
+gawklibpath_prepend () 
+{ 
+    [ -z "$AWKLIBPATH" ] && AWKLIBPATH=`gawk 'BEGIN {print ENVIRON["AWKLIBPATH"]}'`;
+    export AWKLIBPATH="$*:$AWKLIBPATH"
+}
+gawkpath_append () 
+{ 
+    [ -z "$AWKPATH" ] && AWKPATH=`gawk 'BEGIN {print ENVIRON["AWKPATH"]}'`;
+    export AWKPATH="$AWKPATH:$*"
+}
+gawkpath_default () 
+{ 
+    unset AWKPATH;
+    export AWKPATH=`gawk 'BEGIN {print ENVIRON["AWKPATH"]}'`
+}
+gawkpath_prepend () 
+{ 
+    [ -z "$AWKPATH" ] && AWKPATH=`gawk 'BEGIN {print ENVIRON["AWKPATH"]}'`;
+    export AWKPATH="$*:$AWKPATH"
+}
+ml () 
+{ 
+    module ml "$@"
+}
+module () 
+{ 
+    _module_raw "$@" 2>&1
+}
+scl () 
+{ 
+    if [ "$1" = "load" -o "$1" = "unload" ]; then
+        eval "module $@";
+    else
+        /usr/bin/scl "$@";
+    fi
+}
+which () 
+{ 
+    ( alias;
+    eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@
+}
