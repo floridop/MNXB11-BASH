@@ -1,0 +1,3 @@
+code showpath.sh
+chmod +x showpath.sh
+./showpath.sh

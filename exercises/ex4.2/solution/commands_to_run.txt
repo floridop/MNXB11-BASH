@@ -1,0 +1,2 @@
+chmod +x startmnxb11container.sh
+exit

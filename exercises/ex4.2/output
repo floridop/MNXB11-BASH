@@ -1,0 +1,6 @@
+Refreshing SoftwareTree/Milan
+  ERROR: No such file or directory on
+    '/usr/share/lmod/lmod/modulefiles/Core/SoftwareTree/Milan.lua'
+Apptainer> exit
+exit
+
