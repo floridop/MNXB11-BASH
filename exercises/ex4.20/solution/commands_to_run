@@ -1,0 +1,7 @@
+mkdir ~/bin
+cp startmnxb11container.sh ~/bin
+cp ~/.bash_profile ~/bash_profile20230912backup
+code ~/.bash_profile &
+source ~/.bash_profile
+echo $PATH
+startmnxb11container.sh

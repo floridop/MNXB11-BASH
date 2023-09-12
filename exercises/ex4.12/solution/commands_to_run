@@ -1,0 +1,8 @@
+ls ~
+echo $?
+ls /etc/MNXB01
+echo $?
+ls ~; ls /etc/MNXB01
+echo $?
+ls /etc/MNXB01; ls ~
+echo $?
