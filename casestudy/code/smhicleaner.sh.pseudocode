@@ -2,7 +2,7 @@
 
 ########################################################################
 # 
-# shmicleaner.sh - MNXB01-2021 Tutorial
+# shmicleaner.sh - MNXB11-2023 Tutorial
 #
 # Author: Florido Paganelli florido.paganelli@hep.lu.se
 #
@@ -43,7 +43,7 @@ usage(){
 
 
 # T1 Get the first parameter from the command line:
-# (see Tutorial 3 slides 39,40)
+# (see Tutorial 4 slides 43,44)
 # and put it in the variable SMHIINPUT
 SHMIINPUT=YOUR_CODE_HERE
 
@@ -51,7 +51,7 @@ SHMIINPUT=YOUR_CODE_HERE
 # Check that the variable SMHIINPUT is defined, if not, 
 # inform the user, show the script usage by calling the usage() 
 # function in the library above and exit with error
-# See Tutorial3 Slide 47 and exercises 3.14, 3.15
+# See Tutorial 4 Slide 45-47 and exercises 4.14, 4.15
 if YOUR_CODE_HERE
    echo "Missing input file parameter, exiting"
    YOUR_CODE_HERE
@@ -86,8 +86,8 @@ fi
 # and tell the user what happened.
 # remind the user of the syntax by calling the usage() function defined
 # in the libraries section above.
-# test the $? variable, Tutorial 3 slides 41, 42 
-# and previous years exercises (Tutorial 3 slide 15)
+# test the $? variable, Tutorial 4 slides 45-47 
+# and previous years exercises (Tutorial 4 slide 17)
 if YOUR_CODE_HERE
    echo "Error downloading or copying file, maybe wrong command syntax? exiting...."
    YOUR_CODE_HERE
@@ -103,8 +103,8 @@ fi
 # - use the grep option -n  and cut to take just the number.
 # - use the cut command to select field 1 using ':' as separator
 # - Use the pipe | to pass the output of grep to cut
-# Examples about the above can be found in Tutorial 3 slide 84 and 
-# some on Tutorial 2
+# Examples about the above can be found in Tutorial 4 slide 13, 57, 58 and 
+# some in Tutorial 2
 # read also:
 # https://stackoverflow.com/questions/6958841/use-grep-to-report-back-only-line-numbers
 echo "Finding the first line containing 'Datum'..."
@@ -114,7 +114,7 @@ STARTLINE=YOUR_CODE_HERE
 # Use arithmetic expansion to add a line, since the actual 
 # data starts at the STARTLINE + 1 line, so to remove the header
 # where Datum;... is contained
-# See Slides 86, 90
+# See Tutorial 4 Slide 96
 STARTLINE=YOUR_CODE_HERE
 
 # T8 Remove unnecessary lines at the top of the datafile:
@@ -125,7 +125,7 @@ STARTLINE=YOUR_CODE_HERE
 # how to exclude n lines with tail : http://heyrod.com/snippets/skip-n-lines.html
 # For the use of the > operator, see Tutorial 2
 # Redirecting output: https://thoughtbot.com/blog/input-output-redirection-in-the-shell#redirecting-output
-# You can verify the generated file against the same file in tutorial3/casestudy/result
+# You can verify the generated file against the same file in casestudy/result
 echo "Removing the first $STARTLINE lines, result in clean1_${DATAFILE}"
 YOUR_CODE_HERE
 
@@ -135,18 +135,18 @@ YOUR_CODE_HERE
 # that are not consistent with the format, so that we can use the data 
 # these lines contain without discarding them.
 # Write the result to a file called clean2_${DATAFILE} using the > operator
-# see cut examples at the link in Tutorial 3 slide 85, in particular
+# see cut examples at the link in Tutorial 4 slide 13, in particular
 #       "5. Select Multiple Fields from a File"
-# You can verify the generated file against the same file in tutorial3/casestudy/result
+# You can verify the generated file against the same file in casestudy/result
 echo "Selecting only relevant columns, result in clean2_${DATAFILE}"
 YOUR_CODE_HERE
 
 # T10 Convert format to C++ readable with spaces instead of commas:
 # Change semicolons to singe spaces using sed and 
 # write out the result to a file called rawdata_${DATAFILE}
-# TODO read about sed at the links in Tutorial 3 slide 84,
+# Read about sed at the links in Tutorial 4 slide 13,
 # and here: https://linuxize.com/post/how-to-use-sed-to-find-and-replace-string-in-files/
-# You can verify the generated file against the same file in tutorial3/casestudy/result
+# You can verify the generated file against the same file in casestudy/result
 echo "Substituting the ; with spaces, result in rawdata_${DATAFILE}"
 YOUR_CODE_HERE
 
