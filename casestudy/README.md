@@ -106,7 +106,7 @@ that is, like this:
 ...
 ```
 
-## How to proceed
+## Requirements and goals
 
 Your task is to use bash to accomplish the dataset cleanup.
 
@@ -168,19 +168,18 @@ All the above steps are detailed inside the homework pseudocode file
 located in `code/smhicleaner.sh.pseudocode` and tell where to look
 for hints.
 
-### Prepare for the tutorial
+## How to proceed
 
-1. Copy the case study directory to your 
-   home directory on Aurora:
+1. Get a copy of this repo from github:
 
 ```console
-cp -ar /projects/hep/fs10/mnxb01/tutorial3 ~
+git clone https://github.com/floridop/MNXB11-BASH
 ```
 
 2. Access the directory where the pseudocode is:
 
 ```console
-cd ~/tutorial3/casestudy/code
+cd MNXB11-BASH/casestudy/code
 ```
 
 3. Rename the pseudocode file:
@@ -189,10 +188,10 @@ cd ~/tutorial3/casestudy/code
 mv smhicleaner.sh.pseudocode smhicleaner.sh
 ```
 
-4. Open the file with Pluma or the editor you fancy and read and write the code described in the tasks
+4. Open the file with the editor you fancy and read and write the code described in the tasks
 
 ```console
-pluma smhicleaner.sh&
+code smhicleaner.sh&
 ```
 
 - To test your code, don't forget to make smhicleaner.sh executable:
@@ -222,7 +221,7 @@ ignore them as we've seen in the examples in Tutorial 3.
 
 ### Folder structure
 
-the tutorial3/casestudy structure is as follows:
+the casestudy/ folder structure is as follows:
 
 ```
 .
@@ -275,18 +274,19 @@ And finally compare the final output of your script to
 
 for this purpose you can use a text tool called `diff`
 <https://www.geeksforgeeks.org/diff-command-linux-examples/>
+<https://www.computerhope.com/unix/udiff.htm>
 
 Compare `myfile` to `resultfile`:
 ```console
 diff /path/to/myfile /path/to/resultfile
 ```
 
-For example, if you're editing `smhicleaner.sh` in the `~/tutorial3/casestudy/code` folder,
+For example, if you're editing `smhicleaner.sh` in the `casestudy/code` folder,
 and you generated the first file `clean1_smhi-opendata_1_52240_20200905_163726.csv` in
 the same folder, you can do:
 
 ```console
-diff ~/tutorial3/casestudy/code/clean1_smhi-opendata_1_52240_20200905_163726.csv ~/tutorial3/casestudy/result/clean1_smhi-opendata_1_52240_20200905_163726.csv
+diff casestudy/code/clean1_smhi-opendata_1_52240_20200905_163726.csv casestudy/result/clean1_smhi-opendata_1_52240_20200905_163726.csv
 ```
 
 Or if you want a graphical tool you can use `meld`:
