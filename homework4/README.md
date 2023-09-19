@@ -21,12 +21,12 @@ produced to download that file must be removed.
 In this homework you're required to write a bash script called `homework4.sh` 
 that does the following: 
 
-  1. Takes as input a list of URLs to some websites (there is no limit to how many)
-  2. Downloads each URL into an `input_N` file using `wget`, where N is 
-     the position of the link in the list, starting from 1
-  3. Checks whether the downloaded file is a pdf or not. 
+  1. Takes as input a list of URLs to some websites (there is no limit to how many)  
+  2. Downloads each URL into an `input_N` file using `wget`, where N is
+     the position of the link in the list, starting from 1  
+  3. Checks whether the downloaded file is a pdf or not.  
      3.1. If it is a PDF, moves it into a `PDF` folder and adds the 
-    `.pdf` extension to the filename, for example `PDF/input_1.pdf`
+    `.pdf` extension to the filename, for example `PDF/input_1.pdf`  
      3.2. If it is **not** a PDF, moves it into a `notPDF` folder
           for example: `notPDF/input_1`
 
