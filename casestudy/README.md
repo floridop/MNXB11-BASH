@@ -299,3 +299,16 @@ Compare `myfile` to `resultfile`:
 ```console
 meld /path/to/myfile /path/to/resultfile
 ```
+
+## Using the `production` code for the Project
+
+The folder `production` contains a streamlined version of the `smhicleaner.sh` which has better performance, writes less files and produces a log of the activities performed.
+
+You are encouraged to reuse the code for the project and eventually customize if to cleanup the datasets you want to use.
+
+Some suggestions:
+  - create a script that contains a `for` that runs `smhicleaner.sh` on the datasets you're interested on.
+  - modify the code of `smhicleaner.sh` to process a list of files instead of one single file
+  - modify the code of `smhicleaner.sh` to change the format of the data to one that is suitable for your needs or identify data that you want to include/exclude.
+
+
