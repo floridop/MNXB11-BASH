@@ -302,7 +302,7 @@ meld /path/to/myfile /path/to/resultfile
 
 ## Using the `production` code for the Project
 
-The folder `production` contains a streamlined version of the `smhicleaner.sh` which has better performance, writes less files and produces a log of the activities performed.
+The folder `production` contains a streamlined version of the `smhicleaner.sh` script which has better performance, writes less files and produces a log of the activities performed.
 
 You are encouraged to reuse the code for the project and eventually customize if to cleanup the datasets you want to use.
 
