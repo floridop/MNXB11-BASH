@@ -232,15 +232,18 @@ the casestudy/ folder structure is as follows:
 ├── data # contains the original data
 │   ├── README.md # info about the data and whre it can be retrieved
 │   └── smhi-opendata_1_52240_20200905_163726.csv # original data taken from SMHI, see the README.md file above
-└── result # contains examples of the final result and the command output
-    ├── clean1_smhi-opendata_1_52240_20200905_163726.csv  # output file result of the relative task
-    ├── clean2_smhi-opendata_1_52240_20200905_163726.csv  # output file result of the relative task
-    ├── original_smhi-opendata_1_52240_20200905_163726.csv  # original file: it matches ../data/smhi-opendata_1_52240_20200905_163726.csv
-    ├── output_noerrors  # output of the script when a file path is passed as parameter
-    ├── output_error_noparams # output of the script when no parameter is passed
-    ├── output_error_dirnofile  # output of the script when passing a directory instead of a file
-    ├── output_error_filenotfound  # output of the script when the data file does not exist
-    └── rawdata_smhi-opendata_1_52240_20200905_163726.csv # output file final result.
+├── result # contains examples of the final result and the command output
+│   ├── clean1_smhi-opendata_1_52240_20200905_163726.csv  # output file result of the relative task
+│   ├── clean2_smhi-opendata_1_52240_20200905_163726.csv  # output file result of the relative task
+│   ├── original_smhi-opendata_1_52240_20200905_163726.csv  # original file: it matches ../data/smhi-opendata_1_52240_20200905_163726.csv
+│   ├── output_noerrors  # output of the script when a file path is passed as parameter
+│   ├── output_error_noparams # output of the script when no parameter is passed
+│   ├── output_error_dirnofile  # output of the script when passing a directory instead of a file
+│   ├── output_error_filenotfound  # output of the script when the data file does not exist
+│   └── rawdata_smhi-opendata_1_52240_20200905_163726.csv # output file final result.
+└── production # Contains the same script but designed for production environment instead of education.
+    └── smhicleaner.sh # This version of the file writes less files and has better performance. It features also logs to a file.
+                         You are encouraged to use this version for the project.
 ```
 
 ### Tracking your progress
