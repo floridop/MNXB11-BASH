@@ -10,8 +10,8 @@
 #              performs some cleaning actions on it, namely:
 #              - Takes an SMHI datafile <filename> from a specified path in the filesystem
 #              - Cleanses up unwanted information in the data file and
-#                 extracts just the raw temperature data in
-#                 - rawdata_<filename>
+#                 extracts just the bare temperature data in
+#                 - baredata_<filename>
 #              - prepares the file to be read by standard C++ 
 #                CSV libraries
 #
@@ -33,7 +33,7 @@
 usage(){
 	echo "----"
 	echo -e "  To call this script please use"
-	echo -e "   $0 '<path>'"
+	echo -e "   $0 '<path-to-datafile>'"
 	echo -e "  Example:"
     echo -e "   $0 '/tutorial3/casestudy/data/smhi-opendata_1_52240_20200905_163726.csv'"
 	echo "----"
@@ -145,12 +145,12 @@ cut -d';' -f 1,2,3,4,5 clean1_${DATAFILE} > clean2_${DATAFILE}
 
 # T10 Convert format to C++ readable with spaces instead of commas:
 # Change semicolons to singe spaces using sed and 
-# write out the result to a file called rawdata_${DATAFILE}
+# write out the result to a file called baredata_${DATAFILE}
 # Read about sed at the links in Tutorial 4 slide 13,
 # and here: https://linuxize.com/post/how-to-use-sed-to-find-and-replace-string-in-files/
 # You can verify the generated file against the same file in casestudy/result
 echo "Substituting the ; with spaces, result in rawdata_${DATAFILE}"
-sed 's/;/ /g' clean2_${DATAFILE} > rawdata_${DATAFILE}
+sed 's/;/ /g' clean2_${DATAFILE} > baredata_${DATAFILE}
 
 # initialize empty report file
 # here I use the special device /dev/null so that if there is already
