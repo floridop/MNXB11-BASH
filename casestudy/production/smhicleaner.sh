@@ -40,7 +40,7 @@ CLEANER_SCRIPTNAME=`basename $0`
 usage(){
 	echo "----"
 	echo -e "  To call this script please use"
-	echo -e "   $0 '<path>'"
+	echo -e "   $0 '<path-to-datafile>'"
 	echo -e "  Example:"
     echo -e "   $0 '/tutorial3/casestudy/data/smhi-opendata_1_52240_20200905_163726.csv'"
 	echo "----"
@@ -73,7 +73,12 @@ log(){
   fi
   CLEANER_LOGMESSAGE=$1
   CLEANER_LOGTIMESTAMP=`date -Iseconds`
-  echo "[${CLEANER_LOGTIMESTAMP}]: $CLEANER_LOGMESSAGE" >> ${CLEANER_LOGFILE}
+  # Create timestamped message
+  CLEANER_OUTMESSAGE="[${CLEANER_LOGTIMESTAMP}]: $CLEANER_LOGMESSAGE"
+  # Output to screen
+  echo $CLEANER_OUTMESSAGE
+  # Output to file
+  echo $CLEANER_OUTMESSAGE >> ${CLEANER_LOGFILE}
 }
 
 ###### Functions END =##################################################
@@ -116,11 +121,13 @@ if [[ "x$CLEANER_SMHIINPUT" != "x" ]]; then
    #    original_$CLEANER_DATAFILE
    log "Copying input file $CLEANER_SMHIINPUT to original_$CLEANER_DATAFILE"
    cp -a $CLEANER_SMHIINPUT ./original_$CLEANER_DATAFILE
+   # Capture copy errors
+   CLEANER_COPY_OUTCOME=$?
 fi 
 
 # T5 Check that the input file has been copied with no errors:
-if [[ $? != 0 ]]; then
-   echo "Error downloading or copying file, maybe wrong command syntax? exiting...." 1>&2
+if [[ $CLEANER_COPY_OUTCOME != 0 ]]; then
+   echo "Error downloading or copying file, check filename or command syntax. Exiting...." 1>&2
    usage
    exit 1
 fi
