@@ -149,7 +149,7 @@ cut -d';' -f 1,2,3,4,5 clean1_${DATAFILE} > clean2_${DATAFILE}
 # Read about sed at the links in Tutorial 4 slide 13,
 # and here: https://linuxize.com/post/how-to-use-sed-to-find-and-replace-string-in-files/
 # You can verify the generated file against the same file in casestudy/result
-echo "Substituting the ; with spaces, result in rawdata_${DATAFILE}"
+echo "Substituting the ; with spaces, result in baredata_${DATAFILE}"
 sed 's/;/ /g' clean2_${DATAFILE} > baredata_${DATAFILE}
 
 # initialize empty report file
