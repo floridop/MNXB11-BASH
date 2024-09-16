@@ -10,8 +10,8 @@
 #              performs some cleaning actions on it, namely:
 #              - Takes an SMHI datafile <filename> from a specified path in the filesystem
 #              - Cleanses up unwanted information in the data file and
-#                 extracts just the raw temperature data in
-#                 - rawdata_<filename>
+#                 extracts just the bare temperature data in
+#                 - baredata_<filename>
 #              - prepares the file to be read by standard C++ 
 #                CSV libraries
 #
@@ -152,5 +152,5 @@ STARTLINE=$(( $STARTLINE + 1 ))
 # - Remove unnecessary lines at the top of the datafile (tail)
 # - Fix format for the strange lines with comments (cut)
 # - Convert format to spaces instead of commas (sed)
-log "Perform cleanup in one line, result in rawdata_${CLEANER_DATAFILE}"
-tail -n +$STARTLINE original_${CLEANER_DATAFILE} | cut -d';' -f 1,2,3,4,5 | sed 's/;/ /g' > rawdata_${CLEANER_DATAFILE}
+log "Perform cleanup in one line, result in baredata_${CLEANER_DATAFILE}"
+tail -n +$STARTLINE original_${CLEANER_DATAFILE} | cut -d';' -f 1,2,3,4,5 | sed 's/;/ /g' > baredata_${CLEANER_DATAFILE}
