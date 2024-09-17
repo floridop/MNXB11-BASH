@@ -141,6 +141,7 @@ fi
 # put the value in a variable called STARTLINE
 log "Finding the first line containing 'Datum'..."
 STARTLINE=$(grep -n 'Datum' original_${CLEANER_DATAFILE} | cut -d':' -f 1)
+log "Found line $STARTLINE"
 
 # T7 skip one more header line:
 # Use arithmetic expansion to add a line, since the actual 
@@ -154,3 +155,4 @@ STARTLINE=$(( $STARTLINE + 1 ))
 # - Convert format to spaces instead of commas (sed)
 log "Perform cleanup in one line, result in baredata_${CLEANER_DATAFILE}"
 tail -n +$STARTLINE original_${CLEANER_DATAFILE} | cut -d';' -f 1,2,3,4,5 | sed 's/;/ /g' > baredata_${CLEANER_DATAFILE}
+
