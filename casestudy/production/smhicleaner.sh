@@ -58,7 +58,7 @@ createlog(){
      echo "cannot write logfile, exiting" 1>&2
      exit 1
   fi
-  echo "Redirecting logs to $CLEANER_LOGFILE"
+  echo "Redirecting cleaner logs to $CLEANER_LOGFILE"
 }
 
 # logging utility
@@ -74,7 +74,7 @@ log(){
   CLEANER_LOGMESSAGE=$1
   CLEANER_LOGTIMESTAMP=`date -Iseconds`
   # Create timestamped message
-  CLEANER_OUTMESSAGE="[${CLEANER_LOGTIMESTAMP}]: $CLEANER_LOGMESSAGE"
+  CLEANER_OUTMESSAGE="[${CLEANER_LOGTIMESTAMP} Cleaner]: $CLEANER_LOGMESSAGE"
   # Output to screen
   echo $CLEANER_OUTMESSAGE
   # Output to file

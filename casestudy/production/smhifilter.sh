@@ -50,7 +50,7 @@ createlog(){
      echo "cannot write logfile, exiting" 1>&2
      exit 1
   fi
-  echo "Redirecting logs to $FILTER_LOGFILE"
+  echo "Redirecting filter logs to $FILTER_LOGFILE"
 }
 
 # logging utility
@@ -66,7 +66,7 @@ log(){
   FILTER_LOGMESSAGE=$1
   FILTER_LOGTIMESTAMP=`date -Iseconds`
   # Create timestamped message
-  FILTER_OUTMESSAGE="[${FILTER_LOGTIMESTAMP}]: $FILTER_LOGMESSAGE"
+  FILTER_OUTMESSAGE="[${FILTER_LOGTIMESTAMP} Filter]: $FILTER_LOGMESSAGE"
   # Output to screen
   echo $FILTER_OUTMESSAGE
   # Output to file
