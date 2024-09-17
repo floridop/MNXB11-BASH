@@ -86,7 +86,7 @@ Datum;Tid (UTC);Lufttemperatur;Kvalitet;;Tidsutsnitt:
 The final result should look **exactly** like the in file
 
 ```
-   result/rawdata_smhi-opendata_1_52230_20210906_212532.csv
+   result/baredata_smhi-opendata_1_52230_20210906_212532.csv
 ```
 
 that is, like this:
@@ -134,7 +134,7 @@ In detail, the script must:
 - `original_smhi-opendata_1_52240_20200905_163726.csv` : a copy of the original file `smhi-opendata_1_52240_20200905_163726.csv`
 - `clean1_smhi-opendata_1_52240_20200905_163726.csv`: a cleanup of the original data file with only the lines after the line that starts with `Datum`
 - `clean2_smhi-opendata_1_52240_20200905_163726.csv`: a cleanup of `clean1_smhi-opendata_1_52240_20200905_163726.csv` without the additional metadata at the end of each line
-- `rawdata_smhi-opendata_1_52240_20200905_163726.csv`: the final result that should contain only the lines about temperature data as in the example above.
+- `baredata_smhi-opendata_1_52240_20200905_163726.csv`: the final result that should contain only the lines about temperature data as in the example above.
 
 4. The script must show the user what is going on and give good errors 
 as in the `result/output_*` files (see "Folder structure" below for 
@@ -146,7 +146,7 @@ Copying input file ../data/smhi-opendata_1_52230_20210906_212532.csv to original
 Finding the first line containing 'Datum'...
 Removing the first 11 lines, result in clean1_smhi-opendata_1_52230_20210906_212532.csv
 Selecting only relevant columns, result in clean2_smhi-opendata_1_52230_20210906_212532.csv
-Substituting the ; with spaces, result in rawdata_smhi-opendata_1_52230_20210906_212532.csv
+Substituting the ; with spaces, result in baredata_smhi-opendata_1_52230_20210906_212532.csv
 Writing filesizes summary to report_smhi-opendata_1_52230_20210906_212532.csv
 
 pflorido@atariXL:~/git/MNXB01-2021/floridopag/tutorial3/casestudy/result$ ls -ltrah
@@ -157,7 +157,7 @@ total 25M
 -rw-rw-r-- 1 pflorido pflorido   65 sep 10 12:19 output_dirnotfile
 -rw-rw-r-- 1 pflorido pflorido 6,3M sep 10 12:19 clean1_smhi-opendata_1_52230_20210906_212532.csv
 -rw-rw-r-- 1 pflorido pflorido 6,3M sep 10 12:19 clean2_smhi-opendata_1_52230_20210906_212532.csv
--rw-rw-r-- 1 pflorido pflorido 6,3M sep 10 12:19 rawdata_smhi-opendata_1_52230_20210906_212532.csv
+-rw-rw-r-- 1 pflorido pflorido 6,3M sep 10 12:19 baredata_smhi-opendata_1_52230_20210906_212532.csv
 drwxrwxr-x 2 pflorido pflorido 4,0K sep 10 12:19 .
 -rw-rw-r-- 1 pflorido pflorido  374 sep 10 12:19 report_smhi-opendata_1_52230_20210906_212532.csv
 drwxrwxr-x 5 pflorido pflorido 4,0K sep 10 12:29 ..
@@ -240,7 +240,7 @@ the casestudy/ folder structure is as follows:
 │   ├── output_error_noparams # output of the script when no parameter is passed
 │   ├── output_error_dirnofile  # output of the script when passing a directory instead of a file
 │   ├── output_error_filenotfound  # output of the script when the data file does not exist
-│   └── rawdata_smhi-opendata_1_52240_20200905_163726.csv # output file final result.
+│   └── baredata_smhi-opendata_1_52240_20200905_163726.csv # output file final result.
 └── production # Contains the same script but designed for production environment instead of education.
     └── smhicleaner.sh # This version of the file writes less files and has better performance. It features also logs to a file.
                          You are encouraged to use this version for the project.
@@ -265,7 +265,7 @@ the intermediate files you generate on each task that requires such files.
     ├── clean1_smhi-opendata_1_52240_20200905_163726.csv  
     ├── clean2_smhi-opendata_1_52240_20200905_163726.csv  
     ├── original_smhi-opendata_1_52240_20200905_163726.csv  # original file: it matches ../data/smhi-opendata_1_52240_20200905_163726.csv
-    └── rawdata_smhi-opendata_1_52240_20200905_163726.csv # final result.
+    └── baredata_smhi-opendata_1_52240_20200905_163726.csv # final result.
 ```
 
 And finally compare the final output of your script to
