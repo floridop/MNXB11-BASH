@@ -160,33 +160,3 @@ STARTLINE=$(( $STARTLINE + 1 ))
 # - Convert format to spaces instead of commas (sed)
 log "Perform cleanup in one line, result in $CLEANER_BAREDATAFILENAME"
 tail -n +$STARTLINE $CLEANER_ORIGINALFILENAME | cut -d';' -f 1,2,3,4,5 | sed 's/;/ /g' > $CLEANER_BAREDATAFILENAME
-
-##############################
-# Filtering
-##############################
-# Here one can write some filters to further pre-select only wanted data.
-# NOTE: avoid doing any maths in BASH. If your filters requires
-# calculations, then do it in C++ or ROOT.
-
-# base output filename for filtering. The name can be changed to something more relevant.
-CLEANER_FILTEREDFILENAME="filtered_${CLEANER_DATAFILE}"
-
-# Some examples:
-# Select only measurements done exactly at 13:00:00
-CLEANER_FILTERFILENAME_ONLYAT13="onlyat13_$CLEANER_FILTEREDFILENAME"
-log "Filtering on only measurements taken at exactly 13:00:00, writing to $CLEANER_FILTERFILENAME_ONLYAT13"
-grep '13:00:00' $CLEANER_BAREDATAFILENAME > $CLEANER_FILTERFILENAME_ONLYAT13
-
-# Select only measurements done in April
-CLEANER_FILTERFILENAME_ONLYAPRIL="april_$CLEANER_FILTEREDFILENAME"
-log "Filtering on only measurements taken in April, writing to $CLEANER_FILTERFILENAME_ONLYAPRIL"
-grep '\-04\-' $CLEANER_BAREDATAFILENAME > $CLEANER_FILTERFILENAME_ONLYAPRIL
-
-# Select only measurements with negative temperature
-## Using the awk programming language. Below, $0 is a whole line, while
-## $3 is a field of the csv line. 
-## The awk default field separator is one or more spaces, but it can be redefined with the -F option
-## More about awk: <https://www.tutorialspoint.com/awk/awk_basic_examples.htm>
-CLEANER_FILTERFILENAME_ONLYNEGATIVE="onlynegative_$CLEANER_FILTEREDFILENAME"
-log "Filtering on only negative temperatures, writing to $CLEANER_FILTERFILENAME_ONLYNEGATIVE"
-awk '$3 < 0 {print $0}' $CLEANER_BAREDATAFILENAME > $CLEANER_FILTERFILENAME_ONLYNEGATIVE
