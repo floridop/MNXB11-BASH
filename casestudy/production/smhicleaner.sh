@@ -108,6 +108,11 @@ fi
 # then store it in a variable CLEANER_DATAFILE
 CLEANER_DATAFILE=$(basename $CLEANER_SMHIINPUT)
 
+# Pre-define names for output files in variables so that they can be
+# used everywhere in the code
+CLEANER_ORIGINALFILENAME="original_${CLEANER_DATAFILE}"
+CLEANER_BAREDATAFILENAME="baredata_${CLEANER_DATAFILE}"
+
 # T4 Analyze the input parameter and copy:
 
 # T4.1 If $CLEANER_SMHIINPUT not empty
@@ -119,8 +124,8 @@ if [[ "x$CLEANER_SMHIINPUT" != "x" ]]; then
    fi
    # T4.3 Copy the file in the current directory as
    #    original_$CLEANER_DATAFILE
-   log "Copying input file $CLEANER_SMHIINPUT to original_$CLEANER_DATAFILE"
-   cp -a $CLEANER_SMHIINPUT ./original_$CLEANER_DATAFILE
+   log "Copying input file $CLEANER_SMHIINPUT to $CLEANER_ORIGINALFILENAME"
+   cp -a $CLEANER_SMHIINPUT $CLEANER_ORIGINALFILENAME
    # Capture copy errors
    CLEANER_COPY_OUTCOME=$?
 fi 
@@ -140,7 +145,7 @@ fi
 # Find what line contains the string "Datum" using grep
 # put the value in a variable called STARTLINE
 log "Finding the first line containing 'Datum'..."
-STARTLINE=$(grep -n 'Datum' original_${CLEANER_DATAFILE} | cut -d':' -f 1)
+STARTLINE=$(grep -n 'Datum' $CLEANER_ORIGINALFILENAME | cut -d':' -f 1)
 log "Found line $STARTLINE"
 
 # T7 skip one more header line:
@@ -154,5 +159,4 @@ STARTLINE=$(( $STARTLINE + 1 ))
 # - Fix format for the strange lines with comments (cut)
 # - Convert format to spaces instead of commas (sed)
 log "Perform cleanup in one line, result in baredata_${CLEANER_DATAFILE}"
-tail -n +$STARTLINE original_${CLEANER_DATAFILE} | cut -d';' -f 1,2,3,4,5 | sed 's/;/ /g' > baredata_${CLEANER_DATAFILE}
-
+tail -n +$STARTLINE $CLEANER_ORIGINALFILENAME | cut -d';' -f 1,2,3,4,5 | sed 's/;/ /g' > $CLEANER_BAREDATAFILENAME
