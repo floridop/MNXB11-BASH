@@ -4,7 +4,7 @@
 # 
 # shmicleaner.sh - Production version
 #
-# Author: Florido Paganelli florido.paganelli@hep.lu.se
+# Author: Florido Paganelli florido.paganelli@fysik.lu.se
 #
 # Description: this script manuipulates specific SMHI dataset and 
 #              performs some cleaning actions on it, namely:
@@ -42,7 +42,7 @@ usage(){
 	echo -e "  To call this script please use"
 	echo -e "   $0 '<path-to-datafile>'"
 	echo -e "  Example:"
-    echo -e "   $0 '/tutorial3/casestudy/data/smhi-opendata_1_52240_20200905_163726.csv'"
+    echo -e "   $0 '../data/smhi-opendata_1_52240_20200905_163726.csv'"
 	echo "----"
 }
 
@@ -156,7 +156,37 @@ STARTLINE=$(( $STARTLINE + 1 ))
 
 # T8, T9, T10 
 # - Remove unnecessary lines at the top of the datafile (tail)
-# - Fix format for the strange lines with comments (cut)
+# - Fix format for the "strange" lines with comments (cut)
 # - Convert format to spaces instead of commas (sed)
-log "Perform cleanup in one line, result in baredata_${CLEANER_DATAFILE}"
+log "Perform cleanup in one line, result in $CLEANER_BAREDATAFILENAME"
 tail -n +$STARTLINE $CLEANER_ORIGINALFILENAME | cut -d';' -f 1,2,3,4,5 | sed 's/;/ /g' > $CLEANER_BAREDATAFILENAME
+
+##############################
+# Filtering
+##############################
+# Here one can write some filters to further pre-select only wanted data.
+# NOTE: avoid doing any maths in BASH. If your filters requires
+# calculations, then do it in C++ or ROOT.
+
+# base output filename for filtering. The name can be changed to something more relevant.
+CLEANER_FILTEREDFILENAME="filtered_${CLEANER_DATAFILE}"
+
+# Some examples:
+# Select only measurements done exactly at 13:00:00
+CLEANER_FILTERFILENAME_ONLYAT13="onlyat13_$CLEANER_FILTEREDFILENAME"
+log "Filtering on only measurements taken at exactly 13:00:00, writing to $CLEANER_FILTERFILENAME_ONLYAT13"
+grep '13:00:00' $CLEANER_BAREDATAFILENAME > $CLEANER_FILTERFILENAME_ONLYAT13
+
+# Select only measurements done in April
+CLEANER_FILTERFILENAME_ONLYAPRIL="april_$CLEANER_FILTEREDFILENAME"
+log "Filtering on only measurements taken in April, writing to $CLEANER_FILTERFILENAME_ONLYAPRIL"
+grep '\-04\-' $CLEANER_BAREDATAFILENAME > $CLEANER_FILTERFILENAME_ONLYAPRIL
+
+# Select only measurements with negative temperature
+## Using the awk programming language. Below, $0 is a whole line, while
+## $3 is a field of the csv line. 
+## The awk default field separator is one or more spaces, but it can be redefined with the -F option
+## More about awk: <https://www.tutorialspoint.com/awk/awk_basic_examples.htm>
+CLEANER_FILTERFILENAME_ONLYNEGATIVE="onlynegative_$CLEANER_FILTEREDFILENAME"
+log "Filtering on only negative temperatures, writing to $CLEANER_FILTERFILENAME_ONLYNEGATIVE"
+awk '$3 < 0 {print $0}' $CLEANER_BAREDATAFILENAME > $CLEANER_FILTERFILENAME_ONLYNEGATIVE
