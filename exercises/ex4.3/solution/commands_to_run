@@ -1,3 +1,2 @@
-code startmnxb11container.sh &
-startmnxb11container.sh
-exit
+code answers.sh &
+./answers.sh
