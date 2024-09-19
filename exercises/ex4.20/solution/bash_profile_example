@@ -7,5 +7,5 @@ fi
 
 # User specific environment and startup programs
 
-export PATH=~/bin:$PATH
+export PATH=/projects/hep/fs10/mnxb11/bin/:$PATH
 
