@@ -1,2 +1,2 @@
-chmod +x startmnxb11container.sh
-exit
+chmod +x answers.sh
+./answers.sh
