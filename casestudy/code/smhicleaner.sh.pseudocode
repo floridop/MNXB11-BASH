@@ -22,6 +22,11 @@
 # So you should NOT assume the file is exactly in any of the above paths.
 # The code must be able to process any possible file path.
 #
+# The slides referenced in the code are from a 2023 lecture that can be
+# found here: 
+# <https://canvas.education.lu.se/courses/24805/files/4052366/download?download_frd=1>
+# If the above link is broken it can made available upon request by emailing the author.
+#
 ########################################################################
 
 
