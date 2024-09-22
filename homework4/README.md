@@ -86,10 +86,10 @@ git push origin homework4
   - T1,2.4.1. Browse your remote repository MNXB11-homework on Canvas
   - T1,2.4.2. Select the `homework4` *branch*
   - T1,2.4.3. Navigate to the `homework4` *folder*
-  - T1,2.4.4. On the upper right corner there are three dots `...` click on those and choose "Copy permalink". The permalinks look like this:  
-  <https://github.com/floridop/MNXB11-BASH/tree/ad75376caa38aafba6b0dd1aae6b0dcc63f21ff7/homework4>
+  - T1,2.4.4. On the upper right corner there are three dots `...` click on those and choose "Copy permalink". 
+    Example: The permalinks look like this <https://github.com/floridop/MNXB11-BASH/tree/ad75376caa38aafba6b0dd1aae6b0dcc63f21ff7/homework4>
 
-### T1,2.5. Submit the permalink obtained above **for your own remote repository** on Canvas.
+### T1,2.5. Submit the permalink obtained above on Canvas.
 
 ## Task 3 (1 point):
 
@@ -123,7 +123,7 @@ git commit -m 'Submission task3'
 git push origin homework4
 ```
 
-### T3.5. Send a new submission on Canvas if you already submitted before.
+### T3.5. Create a new submission on Canvas if you already submitted before.
 
 ## Task 4 (1 point):
 
@@ -151,7 +151,7 @@ git commit -m 'Submission task4'
 git push origin homework4
 ```
 
-### T4.5. Send a new submission on Canvas if you already submitted before.
+### T4.5. Create a new submission on Canvas if you already submitted before.
 
 ## Task 5 (max 2 points):
 
@@ -170,4 +170,4 @@ git commit -m 'Submission task5'
 git push origin homework4
 ```
 
-### T5.3. Send a new submission on Canvas if you already submitted before.
+### T5.3. Create a new submission on Canvas if you already submitted before.
