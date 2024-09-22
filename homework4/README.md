@@ -58,7 +58,7 @@ You can submit multiple times in canvas to notify the teacher that there have be
 
 Submitting tasks 1 and 2 by the deadline will allow you to reach the maximum of 5 points if every task is correct.
 
-If you did the tasks during the tutorial session, you can skip directly to step [T1,2.2.](#t121-perform-tasks-1-and-2) below.
+If you did the tasks during the tutorial session, you can skip directly to step [T1,2.2.](#t122-once-done-execute-the-following-command-on-cosmos-its-ok-to-copy-paste) below.
 
 ### T1,2.1. Perform tasks 1 and 2:
 **Download the latest version of tutorial 2 slides for the correct commands to run.**
@@ -95,7 +95,7 @@ git push origin homework4
 
 Modify the `smhicleaner.sh` production script
 
-T3.1. Familiarize with the case study (slide 66). Read the README.md and understand the solution to the case study.
+### T3.1. Familiarize with the case study (slide 66). Read the README.md and understand the solution to the case study.
 You do not need to do the tasks in the case study, you can look directly at the solution.
 
 <https://github.com/floridop/MNXB11-BASH/blob/d1fb4deb46c7dbadfc9bf8746afc2a161647c2c8/casestudy/code/smhicleaner.sh.solution>
@@ -106,16 +106,16 @@ Then look at the production script to understand the differences.
 
 Try to run the production script to understand what it does.
 
-T3.2. Copy the `smhicleaner.sh` production script from the `MNXB11-BASH` cloned local copy to your homework4 folder:
+### T3.2. Copy the `smhicleaner.sh` production script from the `MNXB11-BASH` cloned local copy to your homework4 folder:
 ```
 cp ~/git/MNXB11-BASH/casestudy/production/smhicleaner.sh ~/git/MNXB11-homework/homework4/
 ```  
 
-T3.3. Modify the production script `smhicleaner.sh` to save the bare data output file with a different separator of your choice, for example a comma “,” (1 point)
+### T3.3. Modify the production script `smhicleaner.sh` to save the bare data output file with a different separator of your choice, for example a comma “,” (1 point)
 
 While you work on the code you can add, commit and push as much as you want, put please make sure that the final commit before submission is as in the next step.
 
-T3.4. For submission, add, commit and push to your remote
+### T3.4. For submission, add, commit and push to your remote
 
 ```
 git add smhicleaner.sh
@@ -123,26 +123,27 @@ git commit -m 'Submission task3'
 git push origin homework4
 ```
 
-T3.5. Send a new submission on Canvas if you already submitted before.
+### T3.5. Send a new submission on Canvas if you already submitted before.
 
 ## Task 4 (1 point):
-T4.1. Familiarize with the `production/smhifilter.sh` script. Learn and understand how to use it.
+
+### T4.1. Familiarize with the `production/smhifilter.sh` script. Learn and understand how to use it.
 
 <https://github.com/floridop/MNXB11-BASH/blob/1bd0b7beb34159a1b9d058f90d49611853726e88/casestudy/production/smhifilter.sh>
 
-T4.2. Copy the `smhifilter.sh` production script from the `MNXB11-BASH` cloned local copy:
+### T4.2. Copy the `smhifilter.sh` production script from the `MNXB11-BASH` cloned local copy:
 ```
 cp ~/git/MNXB11-BASH/casestudy/production/smhifilter.sh ~/git/MNXB11-homework/homework4/
 ```
 
-T4.3. Modify the `smhifilter.sh` script by adding a filter of your choice  (1 point).  
+### T4.3. Modify the `smhifilter.sh` script by adding a filter of your choice  (1 point).  
 You can use the commands listed in slide 9  
 Suggestion: if possible, reuse it during the project, but it's not mandatory.  
 This task can be a shared activity done by the whole project team, but each of the team members must submit individually.  
 
 While you work on the code you can add, commit and push as much as you want, put please make sure that the final commit before submission is as in the next step.
 
-T4.4. Add, commit and push to your remote
+### T4.4. Add, commit and push to your remote
 
 ```
 git add smhifilter.sh
@@ -150,18 +151,18 @@ git commit -m 'Submission task4'
 git push origin homework4
 ```
 
-T4.5. Send a new submission on Canvas if you already submitted before.
+### T4.5. Send a new submission on Canvas if you already submitted before.
 
 ## Task 5 (max 2 points):
 
-T5.1. Create a BASH script that is useful for your project. It will be graded this way:
+### T5.1. Create a BASH script that is useful for your project. It will be graded this way:
   - If the script does not work, doesn’t run, does not do what it is meant to do: 0,5 points.
   - If the script runs with errors: 1-1,5 points.
   - If the script takes care of errors, and exit codes are handled properly (todo slide), 2 points.
 This task can be a shared activity done by the whole project team, but each of the team members must submit individually.
 Team members shoud test the script to see if it does what it should.
 
-T5.2. add, push and commit your script(s) to youyr remote origin
+### T5.2. add, push and commit your script(s) to youyr remote origin
 
 ```
 git add <scriptname.sh>
@@ -169,4 +170,4 @@ git commit -m 'Submission task5'
 git push origin homework4
 ```
 
-T5.3. Send a new submission on Canvas if you already submitted before.
+### T5.3. Send a new submission on Canvas if you already submitted before.
