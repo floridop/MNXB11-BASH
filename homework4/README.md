@@ -58,19 +58,23 @@ You can submit multiple times in canvas to notify the teacher that there have be
 
 Submitting tasks 1 and 2 by the deadline will allow you to reach the maximum of 5 points if every task is correct.
 
+If you did the tasks during the tutorial session, you can skip directly to step [T1,2.2.](#t121-perform-tasks-1-and-2) below.
+
+### T1,2.1. Perform tasks 1 and 2:
+**Download the latest version of tutorial 2 slides for the correct commands to run.**
+
 **Task1:** Improve the default BASH environment by copying the default BASH files as explained in slide 41 - “Problem” (0.5 point)  
->**NOTE:** download the latest version of tutorial 2 slides for the correct commands to run.
        
 **Task2:** Extend the PATH variable to be able to run the script startmnxb11container.sh without specifying its full path as in slide 42 (0.5 point)
 
-T1,2.1. Once done, execute the following command on COSMOS (it's ok to copy-paste):
+### T1,2.2. Once done, execute the following command on COSMOS (it's ok to copy-paste):
 ```
 diff -y /etc/skel/ ~ > ~/git/MNXB11-homework/homework4/tasks12.diff
 ```
 
 This will generate a file with differences that the teacher will inspect for grading.
 
-T1,2.2. Add the file to your git repo and push to your origin:
+### T1,2.3. Add the file to your git repo and push to your origin:
 
 ```
 git add tasks12.diff
@@ -78,14 +82,14 @@ git commit -m 'Submission task 1,2'
 git push origin homework4
 ```
 
-T1,2.3. Find the permalink for submission
-  T1,2.3.1. Browse your remote repository MNXB11-homework on Canvas
-  T1,2.3.2. Select the homework4 branch
-  T1,2.3.3. Navigate to the homework4 folder
-  T1,2.3.4. On the upper right corner there are three dots `...` click on those and choose "Copy permalink". The permalinks look like this:
+### T1,2.4. Find the permalink for submission
+  - T1,2.4.1. Browse your remote repository MNXB11-homework on Canvas
+  - T1,2.4.2. Select the `homework4` *branch*
+  - T1,2.4.3. Navigate to the `homework4` *folder*
+  - T1,2.4.4. On the upper right corner there are three dots `...` click on those and choose "Copy permalink". The permalinks look like this:  
   <https://github.com/floridop/MNXB11-BASH/tree/ad75376caa38aafba6b0dd1aae6b0dcc63f21ff7/homework4>
 
-T1,2.4. Submit the permalink obtained above **for your own remote repository** on Canvas.
+### T1,2.5. Submit the permalink obtained above **for your own remote repository** on Canvas.
 
 ## Task 3 (1 point):
 
