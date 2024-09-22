@@ -86,7 +86,7 @@ git push origin homework4
   - T1,2.4.1. Browse your remote repository MNXB11-homework on Canvas
   - T1,2.4.2. Select the `homework4` *branch*
   - T1,2.4.3. Navigate to the `homework4` *folder*
-  - T1,2.4.4. On the upper right corner there are three dots `...` click on those and choose "Copy permalink". 
+  - T1,2.4.4. On the upper right corner there are three dots `...` click on those and choose "Copy permalink".  
     Example: The permalinks look like this <https://github.com/floridop/MNXB11-BASH/tree/ad75376caa38aafba6b0dd1aae6b0dcc63f21ff7/homework4>
 
 ### T1,2.5. Submit the permalink obtained above on Canvas.
