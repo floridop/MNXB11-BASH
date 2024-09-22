@@ -7,59 +7,58 @@
 
 This homework is graded based on accomplishing five tasks.
 
-For the submission you should use the MNXB11-homework repository created during tutorial 2.
+For the submission you should use the `MNXB11-homework` repository created during tutorial 2 - Scenario 1 as described in the steps below.
 
-To prepare for the submission do the following on COSMOS:
+All the operations described below must be done on COSMOS unless otherwise stated.
 
-1) Access the local working directory of your MNXB11-homework repository and create a branch for your homework4
+It is assumed that you followed and understood Tutorial 2 and Tutorial 4.
+
+Dont' get stuck! If you need clarifications please ask.
+
+It is recommended to ask the teacher for clarification of the behavior of a script you wrote/modified that you do not understand **before submission**
+
+To get any points on a given script, the script **must run without errors when all parameters are as expected**; a correct algorithm is not enough to get full score. 
+In other words, *test your code before submitting!*
+
+Max points: 5; max grade: 5. 
+
+## Preparation for submission
+
+Do the following on COSMOS:
+
+1) Update the `MNXB11-BASH` repository we cloned during tutorial 2 to get the latest code updates:
+```
+cd ~/git/MNXB11-BASH
+git pull
+git pull origin main
+```
+
+2) Access the local working directory of your `MNXB11-homework` repository, create and checkout a branch for your homework4 with the following commands:
 ```
 cd ~/git/MNXB11-homework
 git checkout -b homework4
 ```
 
-2) Create a new folder `homework4`
+3) Create a new folder `homework4` and cd into it.
 ```
 mkdir homework4
+cd homework4
 ```
 
-3) Perform the exercise tasks, and for each task remember to follow the section 2. Keep your homework up to date do the following:
+All the tasks will result in a file that you need to create inside that folder.
 
-5) Add and commit your changes 
-  - remember to repeat this any time you make a change!
-  - create relevant commit messages!
-
-Example:
-```
-git add TODO
-git commit -m 'Adding task 1 information  to the template'
-```
-
-7) Push your changes to the remote repository in an homework4 remote branch
-```
-git push origin homework4
-```
-
-6) Once done, find the github permalink to your updated template file.
-Browse your homework4 branch in github until you find the template file you pushed.
-On the top right there are three dots. Click on them and select "Copy Permalkink"
-TODO: pics
-The link looks something like this:
-https://github.com/floridop/MNXB11-BASH/blob/d1fb4deb46c7dbadfc9bf8746afc2a161647c2c8/homework4/TODO
-
-7) Test that if you copy paste the link URL in a new browser page it goes to the expected file.
-
-8) Submit the link to canvas for Homework4.
-
-
-All these operations must be done on COSMOS and it is assumed
-that you followed Tutorial 2 and Tutorial 4.
-
-Submitting tasks 1 and 2 by the deadline will grant you one point.
+## Performing the tasks
 
 You can submit multiple times in canvas to notify the teacher that there have been changes that you want to be corrected.
 
 ## Tasks 1 and 2:
-Complete tasks 1 and 2 as described in slide TODO.
+
+Submitting tasks 1 and 2 by the deadline will allow you to reach the maximum of 5 points if every task is correct.
+
+Task1: Improve the default BASH environment by copying the default BASH files as explained in slide 41 - “Problem” (0.5 point) 
+       NOTE: download the latest version of the slides for the correct commands to run.
+Task2: Extend the PATH variable to be able to run the script startmnxb11container.sh without specifying its full path as in slide 42 (0.5 point)
+
 Once done. execute the following command on COSMOS (it's ok to copy-paste):
 ```
 diff -y /etc/skel/ ~ > ~/git/MNXB11-homework/homework4/tasks12.diff
@@ -76,14 +75,28 @@ git push origin homework4
 ```
 
 ## Task 3:
-3.1. Copy the `smhicleaner.sh` production script from the MNXB11-BASH repository:
+
+Modify the `smhicleaner.sh` production script
+
+T3.1. Familiarize with the case study (slide 66). Read the README.md and understand the solution to the case study.
+You do not need to do the tasks in the case study, you can look directly at the solution.
+<https://github.com/floridop/MNXB11-BASH/blob/d1fb4deb46c7dbadfc9bf8746afc2a161647c2c8/casestudy/code/smhicleaner.sh.solution>
+
+Then look at the production script to understand the differences.
+<https://github.com/floridop/MNXB11-BASH/blob/d1fb4deb46c7dbadfc9bf8746afc2a161647c2c8/casestudy/production/smhicleaner.sh>
+
+Try to run the production script to understand what it does.
+
+T3.2. Copy the `smhicleaner.sh` production script from the MNXB11-BASH repository to your homework4 folder:
 ```
 cp ~/git/MNXB11-BASH/casestudy/production/smhicleaner.sh ~/git/MNXB11-homework/homework4/
 ```  
 
-3.2. Make requested changes TODO to the `smhicleaner.sh` script
+T3.3. Modify the production script `smhicleaner.sh` to save the bare data output file with a different separator of your choice, for example a comma “,” (1 point)
 
-3.3. Add, commit and push to your remote
+While you work on the code you can add, commit and push as much as you want, put please make sure that the final commit before submission is as in the next step.
+
+T3.4. For submission, add, commit and push to your remote
 
 ```
 git add smhicleaner.sh
@@ -91,15 +104,24 @@ git commit -m 'Submission task3'
 git push origin homework4
 ```
 
+T3.5. Send a new submission on Canvas if you already submitted before.
+
 ## Task 4 (1 points):
-4.1. Copy the smhicleaner.sh production script from the MNXB11-BASH repository:
+T4.1. Familiarize with the `production/smhifilter.sh` script. Learn and understand how to use it.
+
+T4.2. Copy the smhicleaner.sh production script from the MNXB11-BASH repository:
 ```
 cp ~/git/MNXB11-BASH/casestudy/production/smhifilter.sh ~/git/MNXB11-homework/homework4/
 ```
 
-4.2. Make requested changes TODO to the smhicleaner.sh script
+T4.3. Modify the script smhifilter.sh script by adding a filter of your choice  (1 point). 
+You can use the commands listed in slide 9
+Suggestion: if possible, reuse it during the project, but it's not mandatory.
+This task can be a shared activity done by the whole project team, but each of the team members must submit individually.
 
-4.3. Add, commit and push to your remote
+While you work on the code you can add, commit and push as much as you want, put please make sure that the final commit before submission is as in the next step.
+
+T4.4. Add, commit and push to your remote
 
 ```
 git add smhifilter.sh
@@ -107,27 +129,23 @@ git commit -m 'Submission task4'
 git push origin homework4
 ```
 
+T4.5. Send a new submission on Canvas if you already submitted before.
+
 ## Task 5 (1 points):
-Create a TODO script in the homework4 folder, add commit and push to your remote.
 
+T5.1. Create a BASH script that is useful for your project. It will be graded this way:
+  - If the script does not work, doesn’t run, does not do what it is meant to do: 0,5 points.
+  - If the script runs with errors: 1 point.
+  - If the script takes care of errors, and exit codes are handled properly (todo slide), 2 points.
+This task can be a shared activity done by the whole project team, but each of the team members must submit individually.
+Team members shoud test the script to see if it does what it should.
 
-# 2. Keep your homework4 up to date
+T5.2. add, push and commit your script(s) to youyr remote origin
 
-For each task, remember to do the following:
-
-1) Add and commit your changes to the task file
-  - remember to repeat this any time you make a change!
-  - create relevant commit messages!
-
-Example for task 1:
 ```
-git add tasks12.diff
-git commit -m 'Adding task 1 and 2 requested file'
-```
-
-2) Push your changes to the remote repository in an homework4 remote branch
-```
+git add <scriptname.sh>
+git commit -m 'Submission task5'
 git push origin homework4
 ```
 
-
+T5.3. Send a new submission on Canvas if you already submitted before.
