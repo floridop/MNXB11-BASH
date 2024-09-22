@@ -30,20 +30,20 @@ Max points: 5; max grade: 5.
 Do the following on COSMOS:
 
 1) Update the `MNXB11-BASH` repository we cloned during tutorial 2 to get the latest code updates:
-```
+```bash
 cd ~/git/MNXB11-BASH
 git pull
 git pull origin main
 ```
 
 2) Access the local working directory of your `MNXB11-homework` repository, create and checkout a branch for your homework4 with the following commands:
-```
+```bash
 cd ~/git/MNXB11-homework
 git checkout -b homework4
 ```
 
 3) Create a new folder `homework4` and cd into it.
-```
+```bash
 mkdir homework4
 cd homework4
 ```
@@ -68,7 +68,7 @@ If you did the tasks during the tutorial session, you can skip directly to step 
 **Task2:** Extend the PATH variable to be able to run the script startmnxb11container.sh without specifying its full path as in slide 42 (0.5 point)
 
 ### T1,2.2. Once done, execute the following command on COSMOS (it's ok to copy-paste):
-```
+```bash
 diff -y /etc/skel/ ~ > ~/git/MNXB11-homework/homework4/tasks12.diff
 ```
 
@@ -76,7 +76,7 @@ This will generate a file with differences that the teacher will inspect for gra
 
 ### T1,2.3. Add the file to your git repo and push to your origin:
 
-```
+```bash
 git add tasks12.diff
 git commit -m 'Submission task 1,2'
 git push origin homework4
@@ -107,7 +107,7 @@ Then look at the production script to understand the differences.
 Try to run the production script to understand what it does.
 
 ### T3.2. Copy the `smhicleaner.sh` production script from the `MNXB11-BASH` cloned local copy to your homework4 folder:
-```
+```bash
 cp ~/git/MNXB11-BASH/casestudy/production/smhicleaner.sh ~/git/MNXB11-homework/homework4/
 ```  
 
@@ -117,7 +117,7 @@ While you work on the code you can add, commit and push as much as you want, put
 
 ### T3.4. For submission, add, commit and push to your remote
 
-```
+```bash
 git add smhicleaner.sh
 git commit -m 'Submission task3'
 git push origin homework4
@@ -132,7 +132,7 @@ git push origin homework4
 <https://github.com/floridop/MNXB11-BASH/blob/1bd0b7beb34159a1b9d058f90d49611853726e88/casestudy/production/smhifilter.sh>
 
 ### T4.2. Copy the `smhifilter.sh` production script from the `MNXB11-BASH` cloned local copy:
-```
+```bash
 cp ~/git/MNXB11-BASH/casestudy/production/smhifilter.sh ~/git/MNXB11-homework/homework4/
 ```
 
@@ -145,7 +145,7 @@ While you work on the code you can add, commit and push as much as you want, put
 
 ### T4.4. Add, commit and push to your remote
 
-```
+```bash
 git add smhifilter.sh
 git commit -m 'Submission task4'
 git push origin homework4
@@ -164,7 +164,7 @@ Team members shoud test the script to see if it does what it should.
 
 ### T5.2. add, push and commit your script(s) to youyr remote origin
 
-```
+```bash
 git add <scriptname.sh>
 git commit -m 'Submission task5'
 git push origin homework4
