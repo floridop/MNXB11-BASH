@@ -15,10 +15,13 @@ It is assumed that you followed and understood Tutorial 2 and Tutorial 4.
 
 Dont' get stuck! If you need clarifications please ask.
 
-It is recommended to ask the teacher for clarification of the behavior of a script you wrote/modified that you do not understand **before submission**
+It is recommended to ask the teacher for clarification of the behavior of a script you wrote/modified that you do not understand **before submission**.
 
 To get any points on a given script, the script **must run without errors when all parameters are as expected**; a correct algorithm is not enough to get full score. 
 In other words, *test your code before submitting!*
+
+If you use ChatGPT or other AI aid, please report it in the submission; describe why and how you used it.
+The exercises are quite easy and they do not require extreme pre-knowledge so they should be doable without any aid, hence we're curious to know why you chose to go the AI way if you do.
 
 Max points: 5; max grade: 5. 
 
@@ -51,7 +54,7 @@ All the tasks will result in a file that you need to create inside that folder.
 
 You can submit multiple times in canvas to notify the teacher that there have been changes that you want to be corrected.
 
-## Tasks 1 and 2:
+## Tasks 1 and 2 (0.5 points each):
 
 Submitting tasks 1 and 2 by the deadline will allow you to reach the maximum of 5 points if every task is correct.
 
@@ -74,15 +77,17 @@ git commit -m 'Submission task 1,2'
 git push origin homework4
 ```
 
-## Task 3:
+## Task 3 (1 point):
 
 Modify the `smhicleaner.sh` production script
 
 T3.1. Familiarize with the case study (slide 66). Read the README.md and understand the solution to the case study.
 You do not need to do the tasks in the case study, you can look directly at the solution.
+
 <https://github.com/floridop/MNXB11-BASH/blob/d1fb4deb46c7dbadfc9bf8746afc2a161647c2c8/casestudy/code/smhicleaner.sh.solution>
 
 Then look at the production script to understand the differences.
+
 <https://github.com/floridop/MNXB11-BASH/blob/d1fb4deb46c7dbadfc9bf8746afc2a161647c2c8/casestudy/production/smhicleaner.sh>
 
 Try to run the production script to understand what it does.
@@ -106,8 +111,10 @@ git push origin homework4
 
 T3.5. Send a new submission on Canvas if you already submitted before.
 
-## Task 4 (1 points):
+## Task 4 (1 point):
 T4.1. Familiarize with the `production/smhifilter.sh` script. Learn and understand how to use it.
+
+<https://github.com/floridop/MNXB11-BASH/blob/1bd0b7beb34159a1b9d058f90d49611853726e88/casestudy/production/smhifilter.sh>
 
 T4.2. Copy the smhicleaner.sh production script from the MNXB11-BASH repository:
 ```
@@ -131,11 +138,11 @@ git push origin homework4
 
 T4.5. Send a new submission on Canvas if you already submitted before.
 
-## Task 5 (1 points):
+## Task 5 (max 2 points):
 
 T5.1. Create a BASH script that is useful for your project. It will be graded this way:
   - If the script does not work, doesn’t run, does not do what it is meant to do: 0,5 points.
-  - If the script runs with errors: 1 point.
+  - If the script runs with errors: 1-1,5 points.
   - If the script takes care of errors, and exit codes are handled properly (todo slide), 2 points.
 This task can be a shared activity done by the whole project team, but each of the team members must submit individually.
 Team members shoud test the script to see if it does what it should.
