@@ -58,24 +58,34 @@ You can submit multiple times in canvas to notify the teacher that there have be
 
 Submitting tasks 1 and 2 by the deadline will allow you to reach the maximum of 5 points if every task is correct.
 
-Task1: Improve the default BASH environment by copying the default BASH files as explained in slide 41 - “Problem” (0.5 point) 
-       NOTE: download the latest version of the slides for the correct commands to run.
-Task2: Extend the PATH variable to be able to run the script startmnxb11container.sh without specifying its full path as in slide 42 (0.5 point)
+**Task1:** Improve the default BASH environment by copying the default BASH files as explained in slide 41 - “Problem” (0.5 point)  
+>**NOTE:** download the latest version of tutorial 2 slides for the correct commands to run.
+       
+**Task2:** Extend the PATH variable to be able to run the script startmnxb11container.sh without specifying its full path as in slide 42 (0.5 point)
 
-Once done. execute the following command on COSMOS (it's ok to copy-paste):
+T1,2.1. Once done, execute the following command on COSMOS (it's ok to copy-paste):
 ```
 diff -y /etc/skel/ ~ > ~/git/MNXB11-homework/homework4/tasks12.diff
 ```
 
 This will generate a file with differences that the teacher will inspect for grading.
 
-Add the file to your git repo and push to your origin:
+T1,2.2. Add the file to your git repo and push to your origin:
 
 ```
 git add tasks12.diff
 git commit -m 'Submission task 1,2'
 git push origin homework4
 ```
+
+T1,2.3. Find the permalink for submission
+  T1,2.3.1. Browse your remote repository MNXB11-homework on Canvas
+  T1,2.3.2. Select the homework4 branch
+  T1,2.3.3. Navigate to the homework4 folder
+  T1,2.3.4. On the upper right corner there are three dots `...` click on those and choose "Copy permalink". The permalinks look like this:
+  <https://github.com/floridop/MNXB11-BASH/tree/ad75376caa38aafba6b0dd1aae6b0dcc63f21ff7/homework4>
+
+T1,2.4. Submit the permalink obtained above **for your own remote repository** on Canvas.
 
 ## Task 3 (1 point):
 
@@ -92,7 +102,7 @@ Then look at the production script to understand the differences.
 
 Try to run the production script to understand what it does.
 
-T3.2. Copy the `smhicleaner.sh` production script from the MNXB11-BASH repository to your homework4 folder:
+T3.2. Copy the `smhicleaner.sh` production script from the `MNXB11-BASH` cloned local copy to your homework4 folder:
 ```
 cp ~/git/MNXB11-BASH/casestudy/production/smhicleaner.sh ~/git/MNXB11-homework/homework4/
 ```  
@@ -116,15 +126,15 @@ T4.1. Familiarize with the `production/smhifilter.sh` script. Learn and understa
 
 <https://github.com/floridop/MNXB11-BASH/blob/1bd0b7beb34159a1b9d058f90d49611853726e88/casestudy/production/smhifilter.sh>
 
-T4.2. Copy the smhicleaner.sh production script from the MNXB11-BASH repository:
+T4.2. Copy the `smhifilter.sh` production script from the `MNXB11-BASH` cloned local copy:
 ```
 cp ~/git/MNXB11-BASH/casestudy/production/smhifilter.sh ~/git/MNXB11-homework/homework4/
 ```
 
-T4.3. Modify the script smhifilter.sh script by adding a filter of your choice  (1 point). 
-You can use the commands listed in slide 9
-Suggestion: if possible, reuse it during the project, but it's not mandatory.
-This task can be a shared activity done by the whole project team, but each of the team members must submit individually.
+T4.3. Modify the `smhifilter.sh` script by adding a filter of your choice  (1 point).  
+You can use the commands listed in slide 9  
+Suggestion: if possible, reuse it during the project, but it's not mandatory.  
+This task can be a shared activity done by the whole project team, but each of the team members must submit individually.  
 
 While you work on the code you can add, commit and push as much as you want, put please make sure that the final commit before submission is as in the next step.
 
