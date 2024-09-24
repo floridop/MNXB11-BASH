@@ -29,7 +29,7 @@ Max points: 5; max grade: 5.
 
 Do the following on COSMOS:
 
-1) Update the `MNXB11-BASH` repository we cloned during tutorial 2 to get the latest code updates:
+1) Update the `MNXB11-BASH` repository we cloned during tutorial 4 to get the latest code updates:
 ```bash
 cd ~/git/MNXB11-BASH
 git pull
@@ -155,7 +155,7 @@ git push origin homework4
 
 ## Task 5 (max 2 points):
 
-### T5.1. Create a BASH script that is useful for your project. It will be graded this way:
+### T5.1. Create a BASH script that is useful for the course final project. It will be graded this way:
   - If the script does not work, doesn’t run, does not do what it is meant to do: 0,5 points.
   - If the script runs with errors: 1-1,5 points.
   - If the script takes care of errors, and exit codes are handled properly (todo slide), 2 points.
