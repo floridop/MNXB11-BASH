@@ -158,7 +158,7 @@ git push origin homework4
 ### T5.1. Create a BASH script that is useful for the [course final project](https://canvas.education.lu.se/courses/30235/files/5258035?module_item_id=1248945). It will be graded this way:
   - If the script does not work, doesn’t run, does not do what it is meant to do: 0,5 points.
   - If the script runs with errors: 1-1,5 points.
-  - If the script takes care of errors, and exit codes are handled properly (todo slide), 2 points.
+  - If the script takes care of errors, and exit codes are handled properly (reference slides: 34, 72, 73, 77-85), 2 points.
 This task can be a shared activity done by the whole project team, but each of the team members must submit individually.
 Team members shoud test the script to see if it does what it should.
 
