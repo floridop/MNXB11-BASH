@@ -61,7 +61,7 @@ Submitting tasks 1 and 2 by the deadline will allow you to reach the maximum of 
 If you did the tasks during the tutorial session, you can skip directly to step [T1,2.2.](#t122-once-done-execute-the-following-command-on-cosmos-its-ok-to-copy-paste) below.
 
 ### T1,2.1. Perform tasks 1 and 2:
-**Download the latest version of tutorial 2 slides for the correct commands to run.**
+**Download the latest version of tutorial 4 slides for the correct commands to run.**
 
 **Task1:** Improve the default BASH environment by copying the default BASH files as explained in slide 41 - “Problem” (0.5 point)  
        
