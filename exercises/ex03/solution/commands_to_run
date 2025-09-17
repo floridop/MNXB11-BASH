@@ -1,0 +1,8 @@
+set
+export
+env
+
+set | less
+export | less
+env | less
+
