@@ -1,0 +1,18 @@
+answers.sh
+echo $?
+
+cp answers.sh answers_exit.sh
+code answers_exit.sh
+./answers_exit.sh
+echo $?
+
+cp answers.sh answers_exit0.sh
+code answers_exit0.sh
+./answers_exit0.sh
+echo $?
+
+cp answers.sh answers_exit1.sh
+code answers_exit1.sh
+./answers_exit1.sh
+echo $?
+

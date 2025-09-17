@@ -1,0 +1,23 @@
+42
+Test the exit status of this file by typing
+  echo $?
+
+0
+
+42
+Test the exit status of this file by typing
+  echo $?
+
+0
+
+42
+Test the exit status of this file by typing
+  echo $?
+
+0
+
+42
+Test the exit status of this file by typing
+  echo $?
+
+1
