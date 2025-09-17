@@ -1,0 +1,8 @@
+More than 2 arguments. Continuing execution
+
+This part of the code is executed only if the arguments are more than 2.
+Inverting arguments order.
+3gra 2gra 1gra
+
+More than 2 arguments. Continuing execution
+Error: The first two parameters are the same string. Exiting...
