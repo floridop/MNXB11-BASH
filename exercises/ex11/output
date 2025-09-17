@@ -1,0 +1,6 @@
+USERINFO is: uid=6312(pflorido) gid=6300(hep) groups=6300(hep),796286063(pkf),33200(lu-lusar),33700(nsg),796286064(atlas),32200(mnxb11),29200(hepldmx),2900(thep),33100(lu-alek),47800(mnxb01),796286065(isolde),796286066(thep-pkf),31800(nnbar),46400(lu-rupo),6500(nuclear),51100(alice)
+MAINGROUP is: gid=6300(hep)
+MAINGROUP reusing the $USERINFO variable content:
+gid=6300(hep)
+uid=6312(pflorido)
+hw1_6312_20250917_1605.tree

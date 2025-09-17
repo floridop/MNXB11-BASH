@@ -1,0 +1,2 @@
+code captureoutput.sh &
+./captureoutput.sh
