@@ -8,7 +8,7 @@ if [ "x$MYENV1" == "x" ]; then
 fi
 
 # create an environment variable. Adds only to the environment of this script
-MYENV2="This is my second environment variable, MYENV2 is defined only in this process"
+MYENV2="This is my second environment variable, defined. MYENV2 is defined only in this process"
 
 # export and environment variable. Adds to the environment where this script is ran
 export MYENV3="This is my third environment variable, exported. MYENV3 is defined in this process and in all children processes"
