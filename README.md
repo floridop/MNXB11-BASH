@@ -8,8 +8,8 @@ paths. Read the `README.md` in each path to get istructions.:
 
 ```
 .
-├── casestudy # A case study to cleanup SMHI datasets
+├── casestudy # A case study to cleanup SMHI datasets using BASH
 ├── examples  # Example code mentioned during the tutorial and in the exercises
-├── exercises # Exercises for Tutorial 4
+├── exercises # Exercises for tutorial
 └── README.md # This file
 ```
