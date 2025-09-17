@@ -1,5 +1,0 @@
-USERINFO is: uid=6312(pflorido) gid=6300(hep) groups=6300(hep),29200(hepldmx),46400(lu-rupo),6500(nuclear),47800(mnxb01),31800(nnbar),2900(thep),32200(mnxb11)
-MAINGROUP is: gid=6300(hep)
-MAINGROUP reusing the $USERINFO variable content:
-gid=6300(hep)
-

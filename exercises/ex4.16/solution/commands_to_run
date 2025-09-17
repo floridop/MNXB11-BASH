@@ -1,5 +1,0 @@
-./commandoutput.sh
-# this one below is to understand what the intended output is
-cat output_after_modify  
-code commandoutput.sh &
-./commandoutput.sh

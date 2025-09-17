@@ -1,9 +1,0 @@
-./testwhile.sh
-abcde
-abcde2
-end
-code testwhile.sh&
-./testwhile.sh
-abcde
-abcde2
-STOP!

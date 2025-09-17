@@ -1,8 +1,0 @@
-set
-export
-env
-apptainer run -B $XAUTHORITY:$XAUTHORITY -B /run/user:/run/user -B /projects:/projects /projects/hep/fs10/mnxb11/containers/mnxb11_al9.latest.sif 
-set
-export
-env
-exit
