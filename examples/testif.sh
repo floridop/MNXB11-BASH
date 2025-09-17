@@ -8,5 +8,7 @@ if  [[ $# -le 2 ]];  then
     exit 1;
 else
     echo "More than 2 arguments. Good!";
-    exit 0;
 fi
+
+echo $@ | rev
+exit 0;
