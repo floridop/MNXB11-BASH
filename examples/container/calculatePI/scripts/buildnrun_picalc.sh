@@ -2,6 +2,7 @@
 
 # CODEPARAM contains the N value to be injected in the C++ code 
 # before building.
+# 1e6 is the default.
 CODEPARAM=${1:-1e6}
 
 # Extracts the full path of this script
@@ -19,11 +20,9 @@ echo "BASEDIR is $BASEDIR"
 # the provided code is not smart enough to accept command
 # line parameters. Definitely an hackish way of developing!
 # But showcases the power of string handling in BASH.
-if [[ "$CODEPARAM" != "1e6" ]]; then
-   echo "Modifying source code with parameter: $CODEPARAM"
-   echo "A backup if the original code will be in $BASEDIR/src/main.cxx.backup"
-   sed -i'.backup' 's/  constexpr long long N = .*;/  constexpr long long N = '"$CODEPARAM"';/' $BASEDIR/src/main.cxx
-fi
+echo "Modifying source code with parameter: $CODEPARAM"
+echo "A backup if the original code will be in $BASEDIR/src/main.cxx.backup"
+sed -i'.backup' 's/  constexpr long long N = .*;/  constexpr long long N = '"$CODEPARAM"';/' $BASEDIR/src/main.cxx
 
 # Path to Cmake build directory
 BUILDPATH=$BASEDIR/build
