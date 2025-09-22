@@ -4,6 +4,8 @@
 #include "helper.hpp"
 
 int main() {
+  // Number of iterations to calculate Pi. Change for different accuracy
+  // Default '1e6' means 1*10 at the power of 6 (1000000 iterations)
   constexpr long long N = 1e6;
 
   std::vector<double> x_hit, y_hit;

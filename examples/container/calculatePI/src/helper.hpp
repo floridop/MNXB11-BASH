@@ -3,6 +3,7 @@
 #include <TGraph.h>
 #include <TCanvas.h>
 #include <TRandom3.h>
+#include <iostream>
 
 namespace roothelp {
 
@@ -12,6 +13,12 @@ namespace roothelp {
     TRandom3 rng(0);
 
     for (long long i = 0; i < N; ++i) {
+
+      // this line below has been added for debugging purposes only
+      // It makes the code very slow due to disk writes
+      //  comment it out for better performance
+      std::cout << "Processing datapoint: " << i << " of " << N << std::endl;      
+
       double x = rng.Uniform();
       double y = rng.Uniform();
 
