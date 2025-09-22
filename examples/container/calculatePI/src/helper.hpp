@@ -14,10 +14,13 @@ namespace roothelp {
 
     for (long long i = 0; i < N; ++i) {
 
-      // this line below has been added for debugging purposes only
+      // this lines below has been added for debugging purposes only
       // It makes the code very slow due to disk writes
       //  comment it out for better performance
-      std::cout << "Processing datapoint: " << i << " of " << N << std::endl;      
+      long long step = i % 1000;
+      if ( step == 0 ) {
+        std::cout << "Processing datapoint: " << i << " of " << N << std::endl;      
+      }
 
       double x = rng.Uniform();
       double y = rng.Uniform();
@@ -31,7 +34,7 @@ namespace roothelp {
       }
     }
   }
-  
+
   void setGraphSettings(TGraph* g_hit, TGraph* g_miss) {
     g_hit->SetMarkerColor(kBlue + 2);
     g_hit->SetMarkerStyle(7);
@@ -43,6 +46,10 @@ namespace roothelp {
   }
 
   void drawImage(TGraph* g_hit, TGraph* g_miss) { 
+     
+    // this line below has been added for debugging purposes only
+    std::cout << "Graph creation in progress..." << std::endl;
+
     TCanvas* c = new TCanvas("c", "", 800, 800);
     g_miss->Draw("AP");
     g_hit->Draw("P same");
