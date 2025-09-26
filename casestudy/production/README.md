@@ -6,6 +6,8 @@
 --------------------------------------------------------
 
 This code is a rework of the cleaning data case study.
+For general information about the scripts read the README.md file
+in `casestudy/README.md`
 
 For the MNXB11 project, you should inspect the code and change it
 to your specific project needs.
@@ -13,6 +15,7 @@ to your specific project needs.
 The two provided BASH scripts accomplish the following:
 
 `smhicleaner.sh` : Removes the headers of SMHI csv standard files and substitutes commas with spaces.
+
 `smhifilter.sh` : Does basic filtering of certain fields
 
 Running the scripts without parameters will show an help message on how to invoke them.
