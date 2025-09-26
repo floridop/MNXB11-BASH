@@ -1,9 +1,32 @@
 --------------------------------------------------------
-# MNXB11-2023-casestudy
+# MNXB11 BASH Data cleaning case study
 --------------------------------------------------------
-### Author: Florido Paganelli florido.paganelli@hep.lu.se
+### Author: Florido Paganelli florido.paganelli@florido.paganelli@fysik.lu.se
 ###         Lund University
 --------------------------------------------------------
+
+## Overview 
+
+The code in this folder does the following:
+
+1) Copies a dataset from a given location
+2) Reworks the content of such dataset using a bash script
+   and various bash tools
+3) Write out the results to screen or files in a specific format
+
+There are two versions of the script, one in the `production` folder that can
+be used for the MNXB11 project, and one in the `code` folder with lots of
+comments and intermediate steps that can be used to learn BASH.
+
+## Folder contents
+
+.
+├── README.md # This document
+├── production # Efficient code that can be used for the MNXB11 project
+├── code # Educational code of the case study
+├── data # Test data for the case study
+└── result # contains results from the case study scripts
+
 
 ## Overview 
 
@@ -14,7 +37,18 @@ This case study code does the following:
    and various bash tools
 3) Write out the results to screen or files in a specific format
 
-## The problem
+## Using the `production` code for the Project
+
+The folder `production` contains a streamlined version of the `smhicleaner.sh` script which has better performance, writes less files and produces a log of the activities performed.
+
+You are encouraged to reuse the code for the project and eventually customize if to cleanup the datasets you want to use.
+
+Some suggestions:
+  - create a script that contains a `for` that runs `smhicleaner.sh` on the datasets you're interested on.
+  - modify the code of `smhicleaner.sh` to process a list of files instead of one single file
+  - modify the code of `smhicleaner.sh` to change the format of the data to one that is suitable for your needs or identify data that you want to include/exclude.
+
+## The problem that these scripts solve
 
 You are given a dataset from SMHI that contains data about the
 temperatures measured by a weather station in Falsterbo:
@@ -106,7 +140,7 @@ that is, like this:
 ...
 ```
 
-## Requirements and goals
+## Using these scripts to learn BASH
 
 Your task is to use bash to accomplish the dataset cleanup.
 
@@ -168,7 +202,7 @@ All the above steps are detailed inside the homework pseudocode file
 located in `code/smhicleaner.sh.pseudocode` and tell where to look
 for hints.
 
-## How to proceed
+### How to proceed
 
 1. Get a copy of this repo from github:
 
@@ -200,7 +234,7 @@ code smhicleaner.sh&
 chmod +x smhicleaner.sh
 ```
 
-### How to progress 
+#### How to progress 
 
 The file shmicleaner.sh.pseudocode contains pseudocode written by the
 teacher to help you progressing and increasing your knowledge of bash.
@@ -219,7 +253,7 @@ If you are annoyed by the error messages caused by lines that you did
 not yet edit, use the `#` symbol to comment out lines so that bash will 
 ignore them as we've seen in the examples in Tutorial 3.
 
-### Folder structure
+#### Folder structure
 
 the casestudy/ folder structure is as follows:
 
@@ -246,7 +280,7 @@ the casestudy/ folder structure is as follows:
                          You are encouraged to use this version for the project.
 ```
 
-### Tracking your progress
+#### Tracking your progress
 
 You can track your progress by comparing the output of your script to 
 the files
@@ -299,16 +333,4 @@ Compare `myfile` to `resultfile`:
 ```console
 meld /path/to/myfile /path/to/resultfile
 ```
-
-## Using the `production` code for the Project
-
-The folder `production` contains a streamlined version of the `smhicleaner.sh` script which has better performance, writes less files and produces a log of the activities performed.
-
-You are encouraged to reuse the code for the project and eventually customize if to cleanup the datasets you want to use.
-
-Some suggestions:
-  - create a script that contains a `for` that runs `smhicleaner.sh` on the datasets you're interested on.
-  - modify the code of `smhicleaner.sh` to process a list of files instead of one single file
-  - modify the code of `smhicleaner.sh` to change the format of the data to one that is suitable for your needs or identify data that you want to include/exclude.
-
 
