@@ -1,3 +1,5 @@
+# The conditional statement IF
+
 Modify the `testif.sh` script so that it has this behavior:
 
 1) If the first two arguments are the same, exit with error.

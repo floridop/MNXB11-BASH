@@ -1,1 +1,14 @@
-Create an `answers.sh` script as described in Tutorial 3, slide 13
+# Your first BASH script
+
+Create an `answers.sh` script with the following content:
+
+```
+#!/bin/bash
+
+# Define and initialize a variable called ANSWERS with the number 42
+ANSWERS=42
+
+# Print to screen the content of the variable
+echo $ANSWERS
+```
+

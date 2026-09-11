@@ -1,3 +1,5 @@
+# Inspect the BASH environment
+
 Explore the BASH environment using the commands:
 `set`
 `export`

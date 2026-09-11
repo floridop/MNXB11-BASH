@@ -1,3 +1,5 @@
+# Single and Double quotes
+
 Learn how to use single quote `'` , double quote `"` and the backslash `\` _escape_ symbol
 
 Single quotes force BASH to parse the string verbatim.

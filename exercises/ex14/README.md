@@ -1,3 +1,5 @@
+# Creating a wrapper script
+
 Create a wrapper script `figlet.sh` outside the container 
 that takes as input a string 
 and passes it to the container 

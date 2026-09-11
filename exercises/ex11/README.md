@@ -1,3 +1,5 @@
+# Modify an existing script
+
 Modify the `captureoutput.sh` script:
 
 1) To print out user information such as

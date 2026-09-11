@@ -1,3 +1,5 @@
+# Exiting a script and exit values
+
 Test the `exit` command and its parameters
 
 1) Comment out only one of the `exit` lines in the `answers.sh` file 

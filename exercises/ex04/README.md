@@ -1,3 +1,5 @@
+# Inspect predefined variables
+
 Modify the answers.sh script to print to screen
 at least three of the predefined variables listed below:
 

@@ -1,3 +1,5 @@
+# Handling command line parameters to a script
+
 Change the `answers.sh` script to take as input the third parameter
 after the name of the script and assign it to the
 ANSWER variable.

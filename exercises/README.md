@@ -30,3 +30,19 @@ For exercises that require commands, the solution can be inspected with
 
 You may want to open multiple terminals, one to check the solution, one to run the command.
 
+# Topics
+
+  - ex01 : # Your first BASH script
+  - ex02 : # Executing scripts
+  - ex03 : # Inspect the BASH environment
+  - ex04 : # Inspect predefined variables
+  - ex05 : # Modify your prompt
+  - ex06 : # Change the content of PATH for your BASH session
+  - ex07 : # Single and Double quotes
+  - ex08 : # BASH debugging
+  - ex09 : # Exiting a script and exit values
+  - ex10 : # Handling command line parameters to a script
+  - ex11 : # Modify an existing script
+  - ex12 : # The conditional statement IF
+  - ex13 : # Loops: the FOR loop
+  - ex14 : # Creating a wrapper script

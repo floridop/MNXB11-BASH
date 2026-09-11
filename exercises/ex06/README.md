@@ -1,3 +1,5 @@
+# Change the content of PATH for your BASH session
+
 Add the course binary path to your PATH
 
 1) Edit `~/.bash_profile` with your favorite editor
