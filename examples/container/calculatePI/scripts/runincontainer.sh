@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 # TODO: add options to compile or run or both
 DOBUILD=${1:-'no'}
