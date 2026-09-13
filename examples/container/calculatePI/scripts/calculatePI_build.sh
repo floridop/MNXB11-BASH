@@ -56,8 +56,5 @@ fi
 
 # Execute generated binary if compilation succeeded
 echo "Built executable $EXECPATH"
-echo "Starting computation..."
-$EXECPATH
-
-echo "Result can be found in $BUILDPATH"
+echo "Please use calculatePI_wrapper.sh to start computation..."
 
