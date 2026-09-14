@@ -157,15 +157,16 @@ To compile on a worker node:
 
 ### 3. Inspecting results
 
-If run in the frontend, you will see the execution output on the screen.
+If the app is ran in the frontend, you will see the execution output on the screen.
 
-If run in SLURM, the code output will be in the `slurm-<jobidcode>.out` file
-as during the tutorial. You can change the name of the file in calculatepi.sbatch if you wish.
+If the app is run in SLURM, the code output will be in the `slurm-<jobidcode>.out` file
+as during the tutorial. You can change the name of the SLURM output file in `calculatepi.sbatch` if you wish.
 
 The execution results will be an image of the points used to determine pi, `pi_hit_miss.png`
-that can be found in the current folder if the program is run direcly,
+that can be found in the current folder if the program is run direcly.
+
 If the script `calculatePI_setup.sh` was used, then the image will be found
-in the folder configured by `calculatePI_setup.sh` along with the information file `nodeinfo.txt`
+in the folder created by `calculatePI_setup.sh` along with the information file `nodeinfo.txt`
 
 ## Profiling required time and memory:
 
