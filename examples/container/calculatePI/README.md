@@ -90,15 +90,15 @@ So make sure to be in the scripts folder to do any of the steps described below.
 #### Test executing the binary via scripts
 
 To run the precompiled binary on the frontend, follow the homework instructions
-to find where the binary is located, and then run
+to find where the binary is located, substitute that path to `<path-to-binary>` below and then run
 
-`calculatePI`
+`<path-to-binary>/calculatePI`
 
 This should show an error since the required libraries are not present on COSMOS.
 
 In order to run the application for testing run:
 
-`startmnxb11container.sh calculatePI`
+`startmnxb11container.sh <path-to-binary>/calculatePI`
 
 Note that the precompiled binary is intentionally time consuming and slow.
 If you experience that the frontend is becoming slow, kill the process
