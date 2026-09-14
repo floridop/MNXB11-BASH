@@ -8,5 +8,5 @@
 FIGLETPARAMS="-f banner $(hostname)"
 
 # start the container with the minimum needed, passing the figlet application with parameters inside the $FIGLETPARAMS variable
-apptainer run -B /projects:/projects /projects/hep/fs10/mnxb11/containers/mnxb11_al9.latest.sif figlet $FIGLETPARAMS
+apptainer run -B /projects:/projects /projects/hep/fs11/share/mnxb11/containers/mnxb11_al9.latest.sif figlet $FIGLETPARAMS
 
