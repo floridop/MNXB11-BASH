@@ -18,16 +18,17 @@ For MXNB11 this code must be run inside the course container.
 .
 ├── CMakeLists.txt # cmake config file
 ├── README.md # This document
-├── scripts # Scripts used to automate the calculation
-│   ├── buildnrun_picalc.sh # Automation script that builds and run the software
-│   ├── runincontainer.sh # Wrapper script to build and run the software in the container
-│   └── calculatepi.sbatch # sbatch script to submit the calculation
+├── scripts # Folder containing BASH and SLURM scripts
+│   ├── build_in_container_calculatePI.sh  # Shell Script that performs the build inside the MNXB11 container. Requires calculatePI_build.sh
+│   ├── calculatePI_build.sh # Script that performs the build and copies the executable to a specified location
+│   ├── calculatePI.sbatch # SLURM script to submit run_in_container_calculatePI.sh as a SLURM batch job
+│   ├── calculatePI_setup.sh # BASH script that configures output folders for calculatePI output and node information files
+│   └── run_in_container_calculatePI.sh # Shell script that runs calculatePI_setup.sh inside the MNXB11 container
 └── src # Source code of the pi calculation program
     ├── CMakeLists.txt # cmake configuration
     ├── helper.hpp # helper header to define certain functions
     └── main.cxx # main c++ code,  based on ROOT
 ```
-
 
 ### `src` folder
 
@@ -42,28 +43,41 @@ contents will be clearer to you as you progress with your knowledge of C++.
 
 `Cmakelists.txt` is used by the build system cmake to compile the program.
 
-### TODO scripts folder
+### scripts folder
 
 The scripts in the `scripts` folder automate tasks that could be done
 manually by a C++ programmer, and they can be used also by people with
 no C++ knowledge.
 
-`buildnrun_picalc.sh` does the following:
+The following is a description of each script:
 
-  1. Takes as input a parameter, the number of data points, and changes
-     the C++ source code accordingly
-  2. Creates a build directory in `build/` and compiles the source code.
+`calculatePI_setup.sh` is a setup script that performs a few tasks prior
+to running the `calculatePI` app. These are:
+  - It creates a directory for the output files of `calculatePI`, using a unique timestamp
+  - Writes a file `nodeinfo.txt` with information about the computing node where the app is ran
+  - Runs the `calculatePI` script inside that directory so that the output files are 
+    generated there.
+
+`run_in_container_calculatePI.sh` is a shell script that executes calculatePI_setup.sh
+inside the MNXB11 container.
+
+`calculatepi.sbatch` is a SLURM batch script that needs to be fine-tuned for
+the homework. Contains the parameters to request resources on computing nodes,
+and then runs run_in_container_calculatePI.sh on a node.
+
+`calculatePI_build.sh` does the following:
+
+  1. Takes as input these parameters:
+     - the number of data points
+     - the destination path of the built binary file
+     - a custom build directory
+  2. Changes the C++ source code according to the datapoints parameter
+  3. Creates a build directory in `build/` if no other directory specified, and compiles the source code.
      The resulting executable is in `build/src/main`
-  3. runs `build/src/main`
+  4. If the destination path is specified, copies the executable there.
 
-The program requires ROOT to be compiled so it must be run in an environment
-that provides the ROOT libraries such as the course container.
-
-`runincontainer.sh` is a wrapper script that runs the `buildnrun_picalc.sh` 
-script inside the container with a certain number of datapoints.
-
-`calculatepi.sbatch` is a batch script that needs to be fine-tuned for 
-the homework.
+`build_in_container_calculatePI.sh` runs `calculatePI_build.sh` inside the MNXB11 container, 
+passing the appropriate parameters.
 
 ## How to use
 
@@ -72,23 +86,74 @@ This code is only meant to be used via the `scripts` folder.
 So make sure to be in the scripts folder to do any of the steps described below.
 
 ### 1. Frontend compilation and execution, for testing
-To run and compile the code on the frontend, run
 
-`startmnxb11container.sh ./buildnrun_picalc.sh`
+#### Test executing the binary via scripts
+
+To run the precompiled binary on the frontend, follow the homework instructions
+to find where the binary is located, and then run
+
+`calculatePI`
+
+This should show an error since the required libraries are not present on COSMOS.
+
+In order to run the application for testing run:
+
+`startmnxb11container.sh calculatePI`
+
+Note that the precompiled binary is intentionally time consuming and slow.
+If you experience that the frontend is becoming slow, kill the process
+by pressing CTRL+C .
+
+To test the setup script, run
+
+`startmnxb11container.sh calculatePI_setup.sh`
+
+This will create a folder that contains some information about the node
+where the job runs and then will run the app.
+Note that also in this case you may be force to exit with CTRL+C .
+Read the BASH code to guess where the folder could be. 
+At least the file nodeinfo.txt should be created there.
+
+To test the container script, run `run_in_container_calculatePI.sh`.
+This will do exactly the same as the previous command, just automated
+in a BASH script.
+
+#### Optional: Compiling the code
+
+To compile the code on the frontend, run
+
+`startmnxb11container.sh ./calculatePI_build.sh`
 The default is 1000000 iterations.
+This should generate a `calculatePI` executable in the current directory.
 
-A heavier computation with more iterations can be run directly using the script
-`./runincontainer.sh`
-which is a _wrapper script_ that starts the application inside the container
-with a larger number of iterations (300000000)
+A heavier computation with more iterations can be compiled using the script
+`build_in_container_calculatePI.sh`
+which is a _wrapper script_ that runs the build script inside the container
+and configures the build script to change the code with a larger number of iterations (300000000)
+The resulting binary will appear in the current directory also as `calculatePI`.
+Note that running this after the other script will overwrite any existing
+`calculatePI` executable without warning.
 
-### 2. Worker node compilation and exection, for homework
+### 2. Worker node execution or compilation
 
-To run and compile on a worker node using SLURM:
+#### 2.1 Running on a worker node
+
+To run on a worker node using SLURM:
 
   1. edit and modify the provided sbatch script `calculatepi.sbatch`
   2. execute the command `sbatch calculatepi.sbatch`
-  3. check the results 
+  3. check the slurm stdout file
+  4. check the contents of the folder generated by `calculatePI_setup.sh`
+
+#### 2.2 Compile on a worker node
+
+To compile on a worker node:
+
+  1. edit and modify the provided sbatch script `calculatepi.sbatch`
+     1.1. Substitute the script `run_in_container_calculatePI.sh` with `build_in_container_calculatePI.sh`
+  2. execute the command `sbatch calculatepi.sbatch`
+  3. check the slurm stdout file
+  4. The resulting binary `calculatePI` should appear in the folder where you launched `sbatch`
 
 ### 3. Inspecting results
 
@@ -97,9 +162,10 @@ If run in the frontend, you will see the execution output on the screen.
 If run in SLURM, the code output will be in the `slurm-<jobidcode>.out` file
 as during the tutorial. You can change the name of the file in calculatepi.sbatch if you wish.
 
-The execution results will be an image of the points used to determine pi, 
-that can be found in: build/src/pi_hit_miss.png 
-
+The execution results will be an image of the points used to determine pi, `pi_hit_miss.png`
+that can be found in the current folder if the program is run direcly,
+If the script `calculatePI_setup.sh` was used, then the image will be found
+in the folder configured by `calculatePI_setup.sh` along with the information file `nodeinfo.txt`
 
 ## Profiling required time and memory:
 
@@ -112,7 +178,7 @@ to request on a worker node.
 For example run the program on the frontend with:
 
 ```
-/usr/bin/time -v runincontainer.sh
+/usr/bin/time -v run_in_container_calculatePI.sh
 ```
 
 wait for the output (it may take long time!!)
