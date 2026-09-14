@@ -19,11 +19,11 @@ For MXNB11 this code must be run inside the course container.
 ├── CMakeLists.txt # cmake config file
 ├── README.md # This document
 ├── scripts # Folder containing BASH and SLURM scripts
-│   ├── build_in_container_calculatePI.sh  # Shell Script that performs the build inside the MNXB11 container. Requires calculatePI_build.sh
-│   ├── calculatePI_build.sh # Script that performs the build and copies the executable to a specified location
-│   ├── calculatePI.sbatch # SLURM script to submit run_in_container_calculatePI.sh as a SLURM batch job
 │   ├── calculatePI_setup.sh # BASH script that configures output folders for calculatePI output and node information files
-│   └── run_in_container_calculatePI.sh # Shell script that runs calculatePI_setup.sh inside the MNXB11 container
+│   ├── run_in_container_calculatePI.sh # Shell script that runs calculatePI_setup.sh inside the MNXB11 container
+│   ├── calculatePI.sbatch # SLURM script to submit run_in_container_calculatePI.sh as a SLURM batch job
+│   ├── calculatePI_build.sh # Script that performs the build and copies the executable to a specified location
+│   └── build_in_container_calculatePI.sh  # Shell Script that performs the build inside the MNXB11 container. Requires calculatePI_build.sh
 └── src # Source code of the pi calculation program
     ├── CMakeLists.txt # cmake configuration
     ├── helper.hpp # helper header to define certain functions
@@ -186,7 +186,7 @@ wait for the output (it may take long time!!)
 
 And search for the following strings:
 
-`Elapsed (wall clock) time (h:mm:ss or m:ss):` average time required by the program
+`Elapsed (wall clock) time (h:mm:ss or m:ss):` average time required by the program  
 `Maximum resident set size (kbytes):` maximum memory required to run the program
 
 These numbers can differ depending on how busy the frontend is.
