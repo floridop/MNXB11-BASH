@@ -4,6 +4,7 @@
 DOBUILD=''
 EXECUTE=''
 
+# Scan parameters and setup variables
 for param in $@; do 
   if [ $param == '--build' ]; then
      DOBUILD='yes'
