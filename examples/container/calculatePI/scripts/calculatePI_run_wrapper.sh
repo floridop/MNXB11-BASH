@@ -19,14 +19,13 @@ EXECPATH=$BUILDPATH/src/main
 echo "BUILD path is $BUILDPATH"
 
 # TODO test if exec file exists
-if [[ $? -ne 0 ]]; then
-   echo "Compilation failed, see compilation errors. Exiting..."
+if [ ! -f $BUILDPATH/src/main ]; then
+   echo "Binary file $BUILDPATH/src/main missing. Run calculatePI_build.sh wrapper first. Exiting..."
    exit 1
 fi
 
-# Execute generated binary if compilation succeeded
-# TODO test if file exists
-echo "Built executable $EXECPATH"
+# Execute generated binary if available
+echo "Found executable in $EXECPATH"
 echo "Starting computation..."
 $EXECPATH
 
