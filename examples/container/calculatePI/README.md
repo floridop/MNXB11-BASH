@@ -1,3 +1,5 @@
+# TODO: update this document #
+
 # Realistic application using container
 
 This folder contains an example of realistic application,
@@ -12,6 +14,7 @@ For MXNB11 this code must be run inside the course container.
 
 ## Folder contents
 
+```
 .
 ├── CMakeLists.txt # cmake config file
 ├── README.md # This document
@@ -23,6 +26,8 @@ For MXNB11 this code must be run inside the course container.
     ├── CMakeLists.txt # cmake configuration
     ├── helper.hpp # helper header to define certain functions
     └── main.cxx # main c++ code,  based on ROOT
+```
+
 
 ### `src` folder
 
