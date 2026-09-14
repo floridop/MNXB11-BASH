@@ -1,5 +1,3 @@
-# TODO: update this document #
-
 # Realistic application using container
 
 This folder contains an example of realistic application,
