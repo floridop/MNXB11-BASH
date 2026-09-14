@@ -5,12 +5,13 @@
 # CODEPARAM contains the N value to be injected in the C++ code 
 # before building.
 # 1e6 is the default.
+# 3e8 makes a long enough generation happen.
 # Can be changed with the first parameter.
 CODEPARAM=${1:-1e6}
 
 # Extracts the full path of this script
 SCRIPTPATH=$(realpath $0)
-echo $SCRIPTPATH
+echo "SCRIPTPATH is $SCRIPTPATH"
 # extracts just the directory where this script is
 SCRIPTDIR=$(dirname $SCRIPTPATH)
 # changes to one level up
@@ -32,6 +33,26 @@ echo "BUILD path is $BUILDPATH"
 DESTDIR=${2:-$SCRIPTDIR}
 # Path of the final binary
 DESTEXEC=$DESTDIR/calculatePI
+
+usage(){
+  echo ""
+  echo "This script builds the calculatePI binary from sources"
+  echo "Usage:"
+  echo "  $0 <precision> <destination binary path> <build path>"
+  echo "     <precision> is a number in exponential notation."
+  echo "          Default: 1e6"
+  echo "     <destination binary path> is where the executable will be placed."
+  echo "          Default: $DESTEXEC"
+  echo "     <source code path> is where the build files should go"
+  echo "          Default: $BUILDPATH"
+  echo ""
+}
+
+# Print some help including defaults if requested
+if [ "$1" == '-h' ] || [ "$1" == '--help' ]; then
+   usage
+   exit
+fi
 
 # This is a trick to change the C++ code on the fly, since
 # the provided code is not smart enough to accept command
