@@ -37,7 +37,7 @@ contents will be clearer to you as you progress with your knowledge of C++.
 
 `Cmakelists.txt` is used by the build system cmake to compile the program.
 
-### scripts folder
+### TODO scripts folder
 
 The scripts in the `scripts` folder automate tasks that could be done
 manually by a C++ programmer, and they can be used also by people with
