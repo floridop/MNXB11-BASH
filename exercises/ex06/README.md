@@ -6,7 +6,7 @@ Add the course binary path to your PATH
 2) Add the following line **at the end** of the file:
 
 ```
-export PATH=/projects/hep/fs10/mnxb11/bin:$PATH
+export PATH=/projects/hep/fs11/share/mnxb11/bin:$PATH
 ```
 
 3) To test that it worked, `source` the file to import the environment:
@@ -20,7 +20,7 @@ source ~/.bash_profile
 the command `which startmnxb11container.sh` should return:
 
 ```
-/projects/hep/fs10/mnxb11/bin/startmnxb11container.sh
+/projects/hep/fs11/share/mnxb11/bin/startmnxb11container.sh
 ```
 
 And if you try to autocomplete the `startmnx` string 

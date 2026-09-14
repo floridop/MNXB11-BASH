@@ -2,3 +2,6 @@ code ~/.bash_profile &
 # add export line to bash profile, then:
 source ~/.bash_profile
 which startmnxb11container.sh
+# if it doesn't work, start a login bash:
+bash -l
+which startmnxb11container.sh
