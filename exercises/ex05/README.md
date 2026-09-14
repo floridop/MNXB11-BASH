@@ -1,19 +1,15 @@
-# Inspect some standard BASH initialization files
+# Inspect predefined variables inside a script
 
-Check the content of the following files using `cat` or an editor like `code`, 
-or your favourite editor:
+Modify the answers.sh script to print to screen
+at least three of the predefined variables listed below:
 
-  * User files:
-    * `~/.bashrc`
-    * `~/.bash_profile`
+- Generic purpose:
+  - PATH: location of the executables in the system
+  - PS1: format of the prompt
+  -  SHELLOPTS: current shell options
+  - UID: current user ID
+  -  PWD: current work folder
 
-   * System files:
-     * `/etc/profile`
-
-List the contents of `/etc/profile.d`
-     
-If on COSMOS:
-  * check the content of `/etc/profile.d/tmpdir.sh`  
-  * In a BASH shell, print the content of the variables defined in `tmpdir.sh`.
-  * Check if there is any file contained in the paths listed in the variables.
-  * Some of the above may only make sense when running a SLURM job.
+- Process info and status codes:
+  - $$ : process Identifier (PID) of the current shell or script
+  - $? : exit code of the last executed command (more about this later)

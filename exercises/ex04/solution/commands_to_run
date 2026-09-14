@@ -1,1 +1,10 @@
-code answers.sh &
+code ~/.bashrc
+cat ~/.bash_profile
+code /etc/profile
+ls /etc/profile.d
+cd /etc/profile.d/
+ls
+code tmpdir.sh
+echo $SLURM_JOBID $SNICTMP $TMPDIR
+ls $SNICTMP $TMPDIR
+
