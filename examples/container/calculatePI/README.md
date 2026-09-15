@@ -87,16 +87,24 @@ So make sure to be in the scripts folder to do any of the steps described below.
 
 #### Test executing the binary via scripts
 
-To run the precompiled binary on the frontend, follow the homework instructions
-to find where the binary is located, substitute that path to `<path-to-binary>` below and then run
+To run the precompiled binary on the frontend, follow the homework instructions.
+At the time of writing, the binary is located on COSMOS at 
+`/projects/hep/fs11/share/mnxb11/bin/calculatePI`.
 
-`<path-to-binary>/calculatePI`
+To run the script enter this in the terminal:
 
-This should show an error since the required libraries are not present on COSMOS.
+`/projects/hep/fs11/share/mnxb11/bin/calculatePI`
+
+This should show an error since the required libraries are not present on COSMOS:
+
+```shell
+$ /projects/hep/fs11/share/mnxb11/bin/calculatePI 
+/projects/hep/fs11/share/mnxb11/bin/calculatePI: error while loading shared libraries: libCore.so: cannot open shared object file: No such file or directory
+```
 
 In order to run the application for testing run:
 
-`startmnxb11container.sh <path-to-binary>/calculatePI`
+`startmnxb11container.sh /projects/hep/fs11/share/mnxb11/bin/calculatePI`
 
 Note that the precompiled binary is intentionally time consuming and slow.
 If you experience that the frontend is becoming slow, kill the process
@@ -108,7 +116,7 @@ To test the setup script, run
 
 This will create a folder that contains some information about the node
 where the job runs and then will run the app.
-Note that also in this case you may be force to exit with CTRL+C .
+Note that also in this case you may be forced to exit with CTRL+C .
 Read the BASH code to guess where the folder could be. 
 At least the file nodeinfo.txt should be created there.
 
@@ -176,13 +184,22 @@ to request on a worker node.
 
 For example run the program on the frontend with:
 
-```
+```shell
 /usr/bin/time -v run_in_container_calculatePI.sh
 ```
 
 wait for the output (it may take long time!!)
 
-And search for the following strings:
+`GNU time` writes its results to standard error, so if you want to write
+the output to a file and don't want to see it on the terminal, you
+could run in the background and pipe standard output and error to a file:
+
+```shell
+/usr/bin/time -v run_in_container_calculatePI.sh &> GNUtimeresults.txt &
+```
+
+Once you have the output on the terminal or inside the `GNUtimeresults.txt` file,
+search for the following strings:
 
 `Elapsed (wall clock) time (h:mm:ss or m:ss):` average time required by the program  
 `Maximum resident set size (kbytes):` maximum memory required to run the program
