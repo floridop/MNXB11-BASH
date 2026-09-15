@@ -147,8 +147,8 @@ To run on a worker node using SLURM:
 
 To compile on a worker node:
 
-  1. edit and modify the provided sbatch script `calculatepi.sbatch`
-     1.1. Substitute the script `run_in_container_calculatePI.sh` with `build_in_container_calculatePI.sh`
+  1. edit and modify the provided sbatch script `calculatepi.sbatch`  
+    1.1. Substitute the script `run_in_container_calculatePI.sh` with `build_in_container_calculatePI.sh`
   2. execute the command `sbatch calculatepi.sbatch`
   3. check the slurm stdout file
   4. The resulting binary `calculatePI` should appear in the folder where you launched `sbatch`
