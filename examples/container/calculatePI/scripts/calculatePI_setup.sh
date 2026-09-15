@@ -23,4 +23,4 @@ echo "Running on $(hostname) $(hostid)" > $DESTINATION/nodeinfo.txt
 
 # Start calculation
 echo "Starting calculation..."
-/projects/hep/fs11/share/mnxb11/calculatePI/calculatePI
+/projects/hep/fs11/share/mnxb11/bin/calculatePI
